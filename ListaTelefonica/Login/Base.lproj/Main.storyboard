@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ListaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="\telefoneImagem" translatesAutoresizingMaskIntoConstraints="NO" id="aHF-oN-Jz7">
+                                <rect key="frame" x="54" y="82" width="267" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="xZn-7L-Olf"/>
+                                    <constraint firstAttribute="width" constant="267" id="zbc-ea-ryQ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPh-Ac-bc1">
+                                <rect key="frame" x="30" y="388" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-OF-h0B">
+                                <rect key="frame" x="150" y="484" width="74" height="30"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="buttonEntrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wr-b8-9ll"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-wD-s96">
+                                <rect key="frame" x="150" y="561" width="75" height="30"/>
+                                <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="buttonCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agx-dv-460"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-G8-dky">
+                                <rect key="frame" x="31" y="302" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aHF-oN-Jz7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="14o-DF-WkG"/>
+                            <constraint firstItem="GPh-Ac-bc1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3H6-zJ-bIh"/>
+                            <constraint firstItem="GPh-Ac-bc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3ZZ-X1-MJ3"/>
+                            <constraint firstItem="lbw-G8-dky" firstAttribute="trailing" secondItem="GPh-Ac-bc1" secondAttribute="trailing" id="5CE-qk-N7u"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="centerX" secondItem="GPh-Ac-bc1" secondAttribute="centerX" id="AeI-KI-bCD"/>
+                            <constraint firstItem="GPh-Ac-bc1" firstAttribute="top" secondItem="lbw-G8-dky" secondAttribute="bottom" constant="56" id="CZe-WN-K1g"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="top" secondItem="GPh-Ac-bc1" secondAttribute="bottom" constant="66" id="IEg-M3-jFX"/>
+                            <constraint firstItem="Uqh-wD-s96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="U5v-Dx-0Lm"/>
+                            <constraint firstItem="Uqh-wD-s96" firstAttribute="top" secondItem="ORC-OF-h0B" secondAttribute="bottom" constant="47" id="Wze-p6-JDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uqh-wD-s96" secondAttribute="trailing" constant="150" id="ZgQ-z3-TuJ"/>
+                            <constraint firstItem="lbw-G8-dky" firstAttribute="leading" secondItem="GPh-Ac-bc1" secondAttribute="leading" constant="1" id="gth-Y2-swl"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="htl-fT-c1H"/>
+                            <constraint firstItem="aHF-oN-Jz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlA-H2-WHt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GPh-Ac-bc1" secondAttribute="trailing" constant="30" id="m2D-RQ-18g"/>
+                            <constraint firstItem="lbw-G8-dky" firstAttribute="top" secondItem="aHF-oN-Jz7" secondAttribute="bottom" constant="92" id="maf-W6-WOE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Uqh-wD-s96" secondAttribute="bottom" constant="8" id="nex-Hl-SEf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCadastrar" destination="Uqh-wD-s96" id="Y0G-h3-5sL"/>
+                        <outlet property="buttonEntrar" destination="ORC-OF-h0B" id="7lc-L1-sYh"/>
+                        <outlet property="imagemTelefone" destination="aHF-oN-Jz7" id="omz-bj-jBp"/>
+                        <outlet property="textFieldEmail" destination="lbw-G8-dky" id="oQe-PI-RTd"/>
+                        <outlet property="textFieldSenha" destination="GPh-Ac-bc1" id="uZK-BL-YqM"/>
+                        <segue destination="ebC-Ih-q5J" kind="show" identifier="segueEntrar" id="y4E-va-5w6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="129.98500749625188"/>
+        </scene>
+        <!--Contados-->
+        <scene sceneID="JUd-NX-Oyj">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Contato" storyboardName="Contados" id="ebC-Ih-q5J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IB9-44-TBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="\telefoneImagem" width="626" height="626"/>
+    </resources>
+</document>

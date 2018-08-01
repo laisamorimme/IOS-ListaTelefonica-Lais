@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26310EDD21108DCB000DAC1E /* LinhaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */; };
+		26310EDE21108DCB000DAC1E /* LinhaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */; };
+		2665B9482111CAFD00C9A94E /* CriarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */; };
+		521F37C82100C2F00001E0D0 /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37C72100C2F00001E0D0 /* SessionControl.swift */; };
+		521F37CB2100C4910001E0D0 /* Contados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F37CA2100C4910001E0D0 /* Contados.storyboard */; };
+		521F37D22100C5DA0001E0D0 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D12100C5DA0001E0D0 /* Contato.swift */; };
+		521F37D62100C6D10001E0D0 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D52100C6D10001E0D0 /* ContatosViewController.swift */; };
+		521F37D82100CAA00001E0D0 /* ContatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D72100CAA00001E0D0 /* ContatoService.swift */; };
+		521F37DA2100CACF0001E0D0 /* ContatoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D92100CACF0001E0D0 /* ContatoRequestFactory.swift */; };
+		521F37DC2100D0BF0001E0D0 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37DB2100D0BF0001E0D0 /* ContatoViewModel.swift */; };
+		521F37DF21021B840001E0D0 /* LInhaTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */; };
+		522BFD7420FE646D00A17394 /* AppDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD7320FE646D00A17394 /* AppDelegate .swift */; };
+		522BFD7620FE646D00A17394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD7520FE646D00A17394 /* ViewController.swift */; };
+		522BFD7920FE646D00A17394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522BFD7720FE646D00A17394 /* Main.storyboard */; };
+		522BFD7C20FE646D00A17394 /* ListaTelefonica.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD7A20FE646D00A17394 /* ListaTelefonica.xcdatamodeld */; };
+		522BFD7E20FE646F00A17394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522BFD7D20FE646F00A17394 /* Assets.xcassets */; };
+		522BFD8120FE646F00A17394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522BFD7F20FE646F00A17394 /* LaunchScreen.storyboard */; };
+		522BFD8C20FE647000A17394 /* ListaTelefonicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD8B20FE647000A17394 /* ListaTelefonicaTests.swift */; };
+		522BFD9720FE647000A17394 /* ListaTelefonicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD9620FE647000A17394 /* ListaTelefonicaUITests.swift */; };
+		527A3C1D5CF2D82D55E38EE6 /* Pods_ListaTelefonica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74777C249C534D93BA8DA124 /* Pods_ListaTelefonica.framework */; };
+		52CEE9F020FF671600A4B4BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE9EF20FF671600A4B4BA /* Localizable.strings */; };
+		52CEE9F420FF689700A4B4BA /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE9F320FF689700A4B4BA /* Colors.json */; };
+		52CEE9F820FF6DA500A4B4BA /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE9F620FF6DA500A4B4BA /* Storyboard.swift */; };
+		52CEE9F920FF6DA500A4B4BA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE9F720FF6DA500A4B4BA /* Assets.swift */; };
+		52CEE9FC20FF6DE100A4B4BA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE9FA20FF6DE100A4B4BA /* Colors.swift */; };
+		52CEE9FD20FF6DE100A4B4BA /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE9FB20FF6DE100A4B4BA /* Localizable.swift */; };
+		52CEE9FF20FF745600A4B4BA /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE9FE20FF745600A4B4BA /* LoginRequestFactory.swift */; };
+		52CEEA0120FF75CC00A4B4BA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEEA0020FF75CC00A4B4BA /* LoginService.swift */; };
+		52CEEA0320FF783300A4B4BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEEA0220FF783300A4B4BA /* User.swift */; };
+		52CEEA0520FFBF1800A4B4BA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CEEA0420FFBF1800A4B4BA /* UserViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		522BFD8820FE647000A17394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 522BFD6820FE646D00A17394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 522BFD6F20FE646D00A17394;
+			remoteInfo = ListaTelefonica;
+		};
+		522BFD9320FE647000A17394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 522BFD6820FE646D00A17394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 522BFD6F20FE646D00A17394;
+			remoteInfo = ListaTelefonica;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTableViewCell.swift; sourceTree = "<group>"; };
+		26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinhaTableViewCell.xib; sourceTree = "<group>"; };
+		2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContatoViewController.swift; sourceTree = "<group>"; };
+		521F37C72100C2F00001E0D0 /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
+		521F37CA2100C4910001E0D0 /* Contados.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contados.storyboard; sourceTree = "<group>"; };
+		521F37D12100C5DA0001E0D0 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		521F37D52100C6D10001E0D0 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
+		521F37D72100CAA00001E0D0 /* ContatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoService.swift; sourceTree = "<group>"; };
+		521F37D92100CACF0001E0D0 /* ContatoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRequestFactory.swift; sourceTree = "<group>"; };
+		521F37DB2100D0BF0001E0D0 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
+		521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LInhaTableView.storyboard; sourceTree = "<group>"; };
+		522BFD7020FE646D00A17394 /* ListaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		522BFD7320FE646D00A17394 /* AppDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate .swift"; sourceTree = "<group>"; };
+		522BFD7520FE646D00A17394 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		522BFD7820FE646D00A17394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		522BFD7B20FE646D00A17394 /* ListaTelefonica.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListaTelefonica.xcdatamodel; sourceTree = "<group>"; };
+		522BFD7D20FE646F00A17394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		522BFD8020FE646F00A17394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		522BFD8220FE646F00A17394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522BFD8720FE647000A17394 /* ListaTelefonicaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListaTelefonicaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		522BFD8B20FE647000A17394 /* ListaTelefonicaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTelefonicaTests.swift; sourceTree = "<group>"; };
+		522BFD8D20FE647000A17394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522BFD9220FE647000A17394 /* ListaTelefonicaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListaTelefonicaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		522BFD9620FE647000A17394 /* ListaTelefonicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTelefonicaUITests.swift; sourceTree = "<group>"; };
+		522BFD9820FE647000A17394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CEE9EF20FF671600A4B4BA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		52CEE9F320FF689700A4B4BA /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		52CEE9F620FF6DA500A4B4BA /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		52CEE9F720FF6DA500A4B4BA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		52CEE9FA20FF6DE100A4B4BA /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		52CEE9FB20FF6DE100A4B4BA /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		52CEE9FE20FF745600A4B4BA /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
+		52CEEA0020FF75CC00A4B4BA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		52CEEA0220FF783300A4B4BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52CEEA0420FFBF1800A4B4BA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		64BA428397299B35DE02FA1B /* Pods-ListaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListaTelefonica/Pods-ListaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
+		74777C249C534D93BA8DA124 /* Pods_ListaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C852A9E5065D8803716FB0A /* Pods-ListaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListaTelefonica/Pods-ListaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		522BFD6D20FE646D00A17394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				527A3C1D5CF2D82D55E38EE6 /* Pods_ListaTelefonica.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD8420FE647000A17394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD8F20FE647000A17394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		521F37C92100C4630001E0D0 /* Listar Contatos */ = {
+			isa = PBXGroup;
+			children = (
+				521F37CA2100C4910001E0D0 /* Contados.storyboard */,
+				521F37CF2100C4D20001E0D0 /* Service */,
+				521F37CE2100C4C50001E0D0 /* ViewModel */,
+				521F37CD2100C4B60001E0D0 /* Controller */,
+				521F37CC2100C4A60001E0D0 /* Model */,
+				521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */,
+			);
+			path = "Listar Contatos";
+			sourceTree = "<group>";
+		};
+		521F37CC2100C4A60001E0D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				521F37D12100C5DA0001E0D0 /* Contato.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		521F37CD2100C4B60001E0D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				521F37D52100C6D10001E0D0 /* ContatosViewController.swift */,
+				26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */,
+				26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */,
+				2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		521F37CE2100C4C50001E0D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				521F37DB2100D0BF0001E0D0 /* ContatoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		521F37CF2100C4D20001E0D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				521F37D72100CAA00001E0D0 /* ContatoService.swift */,
+				521F37D92100CACF0001E0D0 /* ContatoRequestFactory.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		522BFD6720FE646D00A17394 = {
+			isa = PBXGroup;
+			children = (
+				522BFD7220FE646D00A17394 /* ListaTelefonica */,
+				522BFD8A20FE647000A17394 /* ListaTelefonicaTests */,
+				522BFD9520FE647000A17394 /* ListaTelefonicaUITests */,
+				522BFD7120FE646D00A17394 /* Products */,
+				A5A3F5F297698A9006A1FF33 /* Pods */,
+				889C8FCC30A8EEF6246EC709 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		522BFD7120FE646D00A17394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD7020FE646D00A17394 /* ListaTelefonica.app */,
+				522BFD8720FE647000A17394 /* ListaTelefonicaTests.xctest */,
+				522BFD9220FE647000A17394 /* ListaTelefonicaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		522BFD7220FE646D00A17394 /* ListaTelefonica */ = {
+			isa = PBXGroup;
+			children = (
+				521F37C92100C4630001E0D0 /* Listar Contatos */,
+				522F89ED20FF5CB70028D5A7 /* Application */,
+				522BFD7A20FE646D00A17394 /* ListaTelefonica.xcdatamodeld */,
+				522F89EE20FF5D380028D5A7 /* Login */,
+			);
+			path = ListaTelefonica;
+			sourceTree = "<group>";
+		};
+		522BFD8A20FE647000A17394 /* ListaTelefonicaTests */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD8B20FE647000A17394 /* ListaTelefonicaTests.swift */,
+				522BFD8D20FE647000A17394 /* Info.plist */,
+			);
+			path = ListaTelefonicaTests;
+			sourceTree = "<group>";
+		};
+		522BFD9520FE647000A17394 /* ListaTelefonicaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD9620FE647000A17394 /* ListaTelefonicaUITests.swift */,
+				522BFD9820FE647000A17394 /* Info.plist */,
+			);
+			path = ListaTelefonicaUITests;
+			sourceTree = "<group>";
+		};
+		522F89ED20FF5CB70028D5A7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				522F89F020FF5DA00028D5A7 /* Supporting Files */,
+				522BFD7320FE646D00A17394 /* AppDelegate .swift */,
+				521F37C72100C2F00001E0D0 /* SessionControl.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		522F89EE20FF5D380028D5A7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD7720FE646D00A17394 /* Main.storyboard */,
+				52CEE9EB20FF654100A4B4BA /* Service */,
+				52CEE9EA20FF652E00A4B4BA /* ViewModel */,
+				52CEE9E920FF652100A4B4BA /* Model */,
+				52CEE9EC20FF654C00A4B4BA /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		522F89F020FF5DA00028D5A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD7D20FE646F00A17394 /* Assets.xcassets */,
+				522BFD7F20FE646F00A17394 /* LaunchScreen.storyboard */,
+				522BFD8220FE646F00A17394 /* Info.plist */,
+				52CEE9ED20FF656A00A4B4BA /* Generated */,
+				52CEE9EE20FF658B00A4B4BA /* Generators */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52CEE9E920FF652100A4B4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52CEEA0220FF783300A4B4BA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52CEE9EA20FF652E00A4B4BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52CEEA0420FFBF1800A4B4BA /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52CEE9EB20FF654100A4B4BA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52CEE9FE20FF745600A4B4BA /* LoginRequestFactory.swift */,
+				52CEEA0020FF75CC00A4B4BA /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		52CEE9EC20FF654C00A4B4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				522BFD7520FE646D00A17394 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52CEE9ED20FF656A00A4B4BA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				52CEE9FA20FF6DE100A4B4BA /* Colors.swift */,
+				52CEE9FB20FF6DE100A4B4BA /* Localizable.swift */,
+				52CEE9F720FF6DA500A4B4BA /* Assets.swift */,
+				52CEE9F620FF6DA500A4B4BA /* Storyboard.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		52CEE9EE20FF658B00A4B4BA /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				52CEE9EF20FF671600A4B4BA /* Localizable.strings */,
+				52CEE9F320FF689700A4B4BA /* Colors.json */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		889C8FCC30A8EEF6246EC709 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74777C249C534D93BA8DA124 /* Pods_ListaTelefonica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5A3F5F297698A9006A1FF33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C852A9E5065D8803716FB0A /* Pods-ListaTelefonica.debug.xcconfig */,
+				64BA428397299B35DE02FA1B /* Pods-ListaTelefonica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		522BFD6F20FE646D00A17394 /* ListaTelefonica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522BFD9B20FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonica" */;
+			buildPhases = (
+				DC306577CDF80CF7E5CB0467 /* [CP] Check Pods Manifest.lock */,
+				52CEE9F520FF6CB800A4B4BA /* SwiftGen */,
+				522BFD6C20FE646D00A17394 /* Sources */,
+				522BFD6D20FE646D00A17394 /* Frameworks */,
+				522BFD6E20FE646D00A17394 /* Resources */,
+				7BD153C98780B36B71242093 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListaTelefonica;
+			productName = ListaTelefonica;
+			productReference = 522BFD7020FE646D00A17394 /* ListaTelefonica.app */;
+			productType = "com.apple.product-type.application";
+		};
+		522BFD8620FE647000A17394 /* ListaTelefonicaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522BFD9E20FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonicaTests" */;
+			buildPhases = (
+				522BFD8320FE647000A17394 /* Sources */,
+				522BFD8420FE647000A17394 /* Frameworks */,
+				522BFD8520FE647000A17394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				522BFD8920FE647000A17394 /* PBXTargetDependency */,
+			);
+			name = ListaTelefonicaTests;
+			productName = ListaTelefonicaTests;
+			productReference = 522BFD8720FE647000A17394 /* ListaTelefonicaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		522BFD9120FE647000A17394 /* ListaTelefonicaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522BFDA120FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonicaUITests" */;
+			buildPhases = (
+				522BFD8E20FE647000A17394 /* Sources */,
+				522BFD8F20FE647000A17394 /* Frameworks */,
+				522BFD9020FE647000A17394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				522BFD9420FE647000A17394 /* PBXTargetDependency */,
+			);
+			name = ListaTelefonicaUITests;
+			productName = ListaTelefonicaUITests;
+			productReference = 522BFD9220FE647000A17394 /* ListaTelefonicaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		522BFD6820FE646D00A17394 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "lais amorim menezes";
+				TargetAttributes = {
+					522BFD6F20FE646D00A17394 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					522BFD8620FE647000A17394 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 522BFD6F20FE646D00A17394;
+					};
+					522BFD9120FE647000A17394 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 522BFD6F20FE646D00A17394;
+					};
+				};
+			};
+			buildConfigurationList = 522BFD6B20FE646D00A17394 /* Build configuration list for PBXProject "ListaTelefonica" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 522BFD6720FE646D00A17394;
+			productRefGroup = 522BFD7120FE646D00A17394 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				522BFD6F20FE646D00A17394 /* ListaTelefonica */,
+				522BFD8620FE647000A17394 /* ListaTelefonicaTests */,
+				522BFD9120FE647000A17394 /* ListaTelefonicaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		522BFD6E20FE646D00A17394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F37DF21021B840001E0D0 /* LInhaTableView.storyboard in Resources */,
+				522BFD8120FE646F00A17394 /* LaunchScreen.storyboard in Resources */,
+				52CEE9F020FF671600A4B4BA /* Localizable.strings in Resources */,
+				52CEE9F420FF689700A4B4BA /* Colors.json in Resources */,
+				522BFD7E20FE646F00A17394 /* Assets.xcassets in Resources */,
+				522BFD7920FE646D00A17394 /* Main.storyboard in Resources */,
+				26310EDE21108DCB000DAC1E /* LinhaTableViewCell.xib in Resources */,
+				521F37CB2100C4910001E0D0 /* Contados.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD8520FE647000A17394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD9020FE647000A17394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52CEE9F520FF6CB800A4B4BA /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t structured-swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Localizable.strings\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Localizable.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen xcassets -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Assets.xcassets\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Assets.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen colors -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Colors.json\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Colors.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen storyboards -t swift3 \"$PROJECT_DIR/$PROJECT_NAME\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Storyboard.swift\"\n";
+		};
+		7BD153C98780B36B71242093 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ListaTelefonica/Pods-ListaTelefonica-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListaTelefonica/Pods-ListaTelefonica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC306577CDF80CF7E5CB0467 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ListaTelefonica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		522BFD6C20FE646D00A17394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521F37C82100C2F00001E0D0 /* SessionControl.swift in Sources */,
+				521F37D62100C6D10001E0D0 /* ContatosViewController.swift in Sources */,
+				2665B9482111CAFD00C9A94E /* CriarContatoViewController.swift in Sources */,
+				52CEE9F820FF6DA500A4B4BA /* Storyboard.swift in Sources */,
+				52CEE9FD20FF6DE100A4B4BA /* Localizable.swift in Sources */,
+				52CEE9FC20FF6DE100A4B4BA /* Colors.swift in Sources */,
+				52CEEA0520FFBF1800A4B4BA /* UserViewModel.swift in Sources */,
+				522BFD7620FE646D00A17394 /* ViewController.swift in Sources */,
+				52CEEA0120FF75CC00A4B4BA /* LoginService.swift in Sources */,
+				522BFD7420FE646D00A17394 /* AppDelegate .swift in Sources */,
+				52CEE9F920FF6DA500A4B4BA /* Assets.swift in Sources */,
+				52CEE9FF20FF745600A4B4BA /* LoginRequestFactory.swift in Sources */,
+				521F37D22100C5DA0001E0D0 /* Contato.swift in Sources */,
+				521F37D82100CAA00001E0D0 /* ContatoService.swift in Sources */,
+				52CEEA0320FF783300A4B4BA /* User.swift in Sources */,
+				26310EDD21108DCB000DAC1E /* LinhaTableViewCell.swift in Sources */,
+				522BFD7C20FE646D00A17394 /* ListaTelefonica.xcdatamodeld in Sources */,
+				521F37DC2100D0BF0001E0D0 /* ContatoViewModel.swift in Sources */,
+				521F37DA2100CACF0001E0D0 /* ContatoRequestFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD8320FE647000A17394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522BFD8C20FE647000A17394 /* ListaTelefonicaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522BFD8E20FE647000A17394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522BFD9720FE647000A17394 /* ListaTelefonicaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		522BFD8920FE647000A17394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 522BFD6F20FE646D00A17394 /* ListaTelefonica */;
+			targetProxy = 522BFD8820FE647000A17394 /* PBXContainerItemProxy */;
+		};
+		522BFD9420FE647000A17394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 522BFD6F20FE646D00A17394 /* ListaTelefonica */;
+			targetProxy = 522BFD9320FE647000A17394 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		522BFD7720FE646D00A17394 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522BFD7820FE646D00A17394 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		522BFD7F20FE646F00A17394 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522BFD8020FE646F00A17394 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		522BFD9920FE647000A17394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		522BFD9A20FE647000A17394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		522BFD9C20FE647000A17394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C852A9E5065D8803716FB0A /* Pods-ListaTelefonica.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/ListaTelefonicaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		522BFD9D20FE647000A17394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BA428397299B35DE02FA1B /* Pods-ListaTelefonica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/ListaTelefonicaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonica;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		522BFD9F20FE647000A17394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaTelefonicaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonicaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListaTelefonica.app/ListaTelefonica";
+			};
+			name = Debug;
+		};
+		522BFDA020FE647000A17394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaTelefonicaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonicaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListaTelefonica.app/ListaTelefonica";
+			};
+			name = Release;
+		};
+		522BFDA220FE647000A17394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaTelefonicaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonicaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ListaTelefonica;
+			};
+			name = Debug;
+		};
+		522BFDA320FE647000A17394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaTelefonicaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = primeiroApp.ListaTelefonicaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ListaTelefonica;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		522BFD6B20FE646D00A17394 /* Build configuration list for PBXProject "ListaTelefonica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522BFD9920FE647000A17394 /* Debug */,
+				522BFD9A20FE647000A17394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522BFD9B20FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522BFD9C20FE647000A17394 /* Debug */,
+				522BFD9D20FE647000A17394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522BFD9E20FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonicaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522BFD9F20FE647000A17394 /* Debug */,
+				522BFDA020FE647000A17394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522BFDA120FE647000A17394 /* Build configuration list for PBXNativeTarget "ListaTelefonicaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522BFDA220FE647000A17394 /* Debug */,
+				522BFDA320FE647000A17394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		522BFD7A20FE646D00A17394 /* ListaTelefonica.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				522BFD7B20FE646D00A17394 /* ListaTelefonica.xcdatamodel */,
+			);
+			currentVersion = 522BFD7B20FE646D00A17394 /* ListaTelefonica.xcdatamodel */;
+			path = ListaTelefonica.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 522BFD6820FE646D00A17394 /* Project object */;
+}
