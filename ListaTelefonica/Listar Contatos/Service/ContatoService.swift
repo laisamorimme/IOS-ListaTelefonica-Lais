@@ -23,7 +23,7 @@ class ContatoService{
     required init(delegate: ContatoServiceDelegate){
         self.delegate = delegate
     }
-    
+    //
     func getContato(){
         
         ContatoRequestFactory.getContato().validate().responseArray{ (response: DataResponse<[Contato]>) in
@@ -43,6 +43,7 @@ class ContatoService{
             }
         }
     }
+    //
     func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String){
         
         ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in

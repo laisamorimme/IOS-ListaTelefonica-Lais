@@ -26,6 +26,7 @@ class CriarContatoViewController: UIViewController {
 
     @IBOutlet weak var buttonAdicionar: UIButton!
 
+    //a variavel delegate vai ser do tipo CriarContatoViewControllerDelegate:
     var delegate: CriarContatoViewControllerDelegate!
     
     override func viewDidLoad() {
@@ -43,29 +44,29 @@ class CriarContatoViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
  
 
     @IBAction func buttonAdicionar(_ sender: Any) {
         //nome, email,telefone,imagem
+        //vendo se tem algo escrito no textField:
         if let salvarNome = self.textFieldNome.text, let salvarEmail = self.textFieldEmail.text, let salvarTelefone = self.textFieldTelefone.text, let salvarImagem = self.textFieldImagem.text {
-            
+            //salvando no postman:
             self.service.postContato(nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
         }
     }
 }
 
 extension CriarContatoViewController: ContatoServiceDelegate {
-    
+    //caso der success:
     func getContatosSuccess() {
         print("Salvouuuuuu")
-        
+        //vai atualizar a pagina de listar contatos:
         self.delegate.atualizar()
     }
     
     func getContatosFailure(error: String) {
-        
+        print("Deu ruim")
     }
 }
 

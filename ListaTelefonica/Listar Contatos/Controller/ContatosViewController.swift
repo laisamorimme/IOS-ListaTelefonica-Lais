@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-import Reusable
+//import Reusable
 
 class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
     
-    //tabela:
+    //table View:
     @IBOutlet weak var tableView: UITableView!
     
     //variavel servico que herda os metodos da classe ContatoService:
@@ -46,8 +46,9 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         
     }
     
+    //abrirAdicionar é o button +
     @IBAction func abrirAdicionar(_ sender: Any) {
-        //passando da listar contanto para a de adicionar contato
+        //passando da listar contato para a de adicionar contato
         self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
     }
     

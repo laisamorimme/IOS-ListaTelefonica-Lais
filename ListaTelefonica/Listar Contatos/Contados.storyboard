@@ -153,8 +153,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
-                                <rect key="frame" x="146" y="542" width="83" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
+                                <rect key="frame" x="92" y="544" width="191" height="45"/>
                                 <state key="normal" title="Adicionar"/>
                                 <connections>
                                     <action selector="buttonAdicionar:" destination="C2n-F8-Rfx" eventType="touchUpInside" id="6hR-W0-qT3"/>
@@ -163,8 +163,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sEg-ys-KJc" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="146" id="4Fh-xN-OM5"/>
-                            <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="sEg-ys-KJc" secondAttribute="trailing" constant="146" id="5Le-5k-akm"/>
+                            <constraint firstItem="sEg-ys-KJc" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="92" id="4Fh-xN-OM5"/>
+                            <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="sEg-ys-KJc" secondAttribute="trailing" constant="92" id="5Le-5k-akm"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="RBB-Eb-yu9" secondAttribute="trailing" constant="37" id="M2A-vU-smj"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="vLF-U5-DzL" secondAttribute="trailing" constant="37" id="OAk-EY-0xp"/>
                             <constraint firstItem="HHz-pH-O98" firstAttribute="top" secondItem="vLF-U5-DzL" secondAttribute="bottom" constant="47" id="PHG-o2-8yJ"/>
@@ -175,7 +175,7 @@
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="HHz-pH-O98" secondAttribute="trailing" constant="37" id="iAd-aL-fhn"/>
                             <constraint firstItem="RBB-Eb-yu9" firstAttribute="top" secondItem="HHz-pH-O98" secondAttribute="bottom" constant="47" id="ikl-IH-fLz"/>
                             <constraint firstItem="HHz-pH-O98" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="kEy-QV-6AE"/>
-                            <constraint firstItem="sEg-ys-KJc" firstAttribute="top" secondItem="Qf1-eL-BjM" secondAttribute="bottom" constant="69" id="rII-gc-f2g"/>
+                            <constraint firstItem="sEg-ys-KJc" firstAttribute="top" secondItem="Qf1-eL-BjM" secondAttribute="bottom" constant="71" id="rII-gc-f2g"/>
                             <constraint firstItem="sEg-ys-KJc" firstAttribute="centerX" secondItem="Az0-yI-0Xo" secondAttribute="centerX" id="tYO-AK-wGX"/>
                             <constraint firstItem="Qf1-eL-BjM" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="uPc-oS-Cdb"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="Qf1-eL-BjM" secondAttribute="trailing" constant="37" id="vii-W7-yBa"/>
