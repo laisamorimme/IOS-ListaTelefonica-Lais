@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Reusable
 
-class ContatosViewController: UIViewController {
+class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
     
     //tabela:
     @IBOutlet weak var tableView: UITableView!
@@ -46,6 +46,26 @@ class ContatosViewController: UIViewController {
         
     }
     
+    @IBAction func abrirAdicionar(_ sender: Any) {
+        //passando da listar contanto para a de adicionar contato
+        self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
+    }
+    
+    //passa para outra tela ? para poder atualizar
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let controller = segue.destination as? CriarContatoViewController {
+            
+            controller.delegate = self
+        }
+    }
+    
+    func atualizar() {
+        
+        self.contatos = ContatoViewModel.get()
+        
+        self.tableView.reloadData()
+    }
 }
 
 extension ContatosViewController: ContatoServiceDelegate {

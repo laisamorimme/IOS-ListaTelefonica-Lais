@@ -53,7 +53,9 @@ enum StoryboardScene {
   enum Contados: StoryboardType {
     static let storyboardName = "Contados"
 
-    static let initialScene = InitialSceneType<ListaTelefonica.ContatosViewController>(storyboard: Contados.self)
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Contados.self)
+
+    static let contatosViewController = SceneType<ListaTelefonica.ContatosViewController>(storyboard: Contados.self, identifier: "ContatosViewController")
   }
   enum LInhaTableView: StoryboardType {
     static let storyboardName = "LInhaTableView"
@@ -71,6 +73,9 @@ enum StoryboardScene {
 }
 
 enum StoryboardSegue {
+  enum Contados: String, SegueType {
+    case segueAdicionar
+  }
   enum Main: String, SegueType {
     case segueEntrar
   }

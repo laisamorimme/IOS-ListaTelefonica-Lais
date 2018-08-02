@@ -11,7 +11,14 @@ import Alamofire
 
 class ContatoRequestFactory {
     
-    static func getContato() -> DataRequest{
+    static func criarContato(nome:String,aniversario:Int,email:String,telefone:String,imagem:String) -> DataRequest {
+        
+        let parametros: Parameters = ["name":nome,"birth":aniversario,"email":email,"phone":telefone,"picture":imagem]
+        
+        return Alamofire.request(baseUrl + "contacts", method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: header)
+    }
+    
+    static func getContato() -> DataRequest {
        
         return Alamofire.request(baseUrl + "contacts", method: .get, headers: header)
     }

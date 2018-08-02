@@ -14,7 +14,7 @@ struct ContatoView {
     var nome: String = ""
     var email: String = ""
     var avatar: String = ""
-    
+
     var avatarUrl: URL? {
         
         return URL(string: self.avatar)
@@ -65,6 +65,7 @@ class ContatoViewModel {
     static func clear() {
         
         try! uiRealm.write {
+            
             uiRealm.delete(uiRealm.objects(Contato.self))
         }
     }

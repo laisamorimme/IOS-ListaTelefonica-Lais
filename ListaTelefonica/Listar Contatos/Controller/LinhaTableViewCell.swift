@@ -26,6 +26,9 @@ class LinhaTableViewCell: UITableViewCell, NibReusable {
         
         self.LabelNomePessoa.text = contato.nome
         
-        self.imagemPerfil.kf.setImage(with: contato.avatarUrl!)
+        if let url = contato.avatarUrl {
+            
+            self.imagemPerfil.kf.setImage(with: url)
+        }
     }
 }

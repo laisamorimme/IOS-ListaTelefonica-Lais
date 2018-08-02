@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ijL-Rg-PLT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tPT-TN-03D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,24 +13,11 @@
         <!--Contatos View Controller-->
         <scene sceneID="PIg-1B-Io5">
             <objects>
-                <viewController id="ijL-Rg-PLT" customClass="ContatosViewController" customModule="ListaTelefonica" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContatosViewController" id="ijL-Rg-PLT" customClass="ContatosViewController" customModule="ListaTelefonica" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hA7-sk-S7z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-FU-csN">
-                                <rect key="frame" x="0.0" y="23" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Lista de contatos" id="82n-et-xqQ">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cZP-xM-R6M">
-                                            <connections>
-                                                <segue destination="C2n-F8-Rfx" kind="show" id="wr2-1y-cKT"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-MP-eBC">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,13 +28,22 @@
                         <viewLayoutGuide key="safeArea" id="pfR-0K-1HL"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QZm-1I-Qt5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q0S-bh-KvN">
+                            <connections>
+                                <action selector="abrirAdicionar:" destination="ijL-Rg-PLT" id="h9h-jq-118"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gl9-MP-eBC" id="2BI-nH-l7E"/>
+                        <segue destination="VdC-Ad-1wC" kind="show" id="2A2-kO-fVE"/>
+                        <segue destination="C2n-F8-Rfx" kind="show" identifier="segueAdicionar" id="FrX-41-HKH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfa-gm-wk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382" y="-193"/>
+            <point key="canvasLocation" x="556" y="-193.85307346326837"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gcr-ij-f5c">
@@ -58,38 +54,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brQ-a2-ZLQ">
-                                <rect key="frame" x="37" y="168" width="301" height="30"/>
+                                <rect key="frame" x="37" y="212" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6F-k4-ykT">
-                                <rect key="frame" x="37" y="245" width="301" height="30"/>
+                                <rect key="frame" x="37" y="289" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pl-Ok-9wC">
-                                <rect key="frame" x="37" y="322" width="301" height="30"/>
+                                <rect key="frame" x="37" y="366" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Imagem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbl-Dy-E6J">
-                                <rect key="frame" x="37" y="399" width="301" height="30"/>
+                                <rect key="frame" x="37" y="443" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQz-sl-LpW">
-                                <rect key="frame" x="148" y="498" width="79" height="30"/>
+                                <rect key="frame" x="148" y="542" width="79" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rH3-mN-c91">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Detalhes do contato" id="iQ7-49-S4R"/>
+                                    <navigationItem title="Detalhes do contato" id="iQ7-49-S4R">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="aJY-tE-fYX"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -121,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1y-NB-K0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="576"/>
+            <point key="canvasLocation" x="556" y="581"/>
         </scene>
         <!--Criar contato-->
         <scene sceneID="His-DS-22z">
@@ -132,43 +130,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHz-pH-O98">
-                                <rect key="frame" x="37" y="245" width="301" height="30"/>
+                                <rect key="frame" x="37" y="289" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-Eb-yu9">
-                                <rect key="frame" x="37" y="322" width="301" height="30"/>
+                                <rect key="frame" x="37" y="366" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Imagem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-eL-BjM">
-                                <rect key="frame" x="37" y="399" width="301" height="30"/>
+                                <rect key="frame" x="37" y="443" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLF-U5-DzL">
-                                <rect key="frame" x="37" y="168" width="301" height="30"/>
+                                <rect key="frame" x="37" y="212" width="301" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
-                                <rect key="frame" x="146" y="498" width="83" height="30"/>
+                                <rect key="frame" x="146" y="542" width="83" height="30"/>
                                 <state key="normal" title="Adicionar"/>
                                 <connections>
                                     <action selector="buttonAdicionar:" destination="C2n-F8-Rfx" eventType="touchUpInside" id="6hR-W0-qT3"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nqi-gu-I5a">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Novo contato" id="rt1-bi-E8T"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -195,16 +186,33 @@
                     <navigationItem key="navigationItem" title="Title" id="5bX-Wo-W3u"/>
                     <connections>
                         <outlet property="buttonAdicionar" destination="sEg-ys-KJc" id="7mt-HN-ckR"/>
-                        <outlet property="navigationBarNovoContato" destination="Az0-yI-0Xo" id="vr7-fk-VJO"/>
                         <outlet property="textFieldEmail" destination="HHz-pH-O98" id="xSu-Mj-cJQ"/>
                         <outlet property="textFieldImagem" destination="Qf1-eL-BjM" id="ZuW-Mb-GSP"/>
-                        <outlet property="textFieldNome" destination="vLF-U5-DzL" id="QrF-zz-jGG"/>
+                        <outlet property="textFieldNome" destination="vLF-U5-DzL" id="oP4-KY-fM2"/>
                         <outlet property="textFieldTelefone" destination="RBB-Eb-yu9" id="b6F-f0-SuM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne5-UA-XwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440.80000000000001" y="-194.75262368815595"/>
+            <point key="canvasLocation" x="1380" y="-194.75262368815595"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BVW-GZ-svQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPT-TN-03D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uMl-d3-abF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ijL-Rg-PLT" kind="relationship" relationship="rootViewController" id="bq0-sj-3tx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdQ-XO-xDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383.19999999999999" y="-193.85307346326837"/>
         </scene>
     </scenes>
 </document>

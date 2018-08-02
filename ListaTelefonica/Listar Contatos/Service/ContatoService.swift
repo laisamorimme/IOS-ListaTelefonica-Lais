@@ -19,6 +19,7 @@ class ContatoService{
     
     var delegate:ContatoServiceDelegate
     
+    //init: construtor
     required init(delegate: ContatoServiceDelegate){
         self.delegate = delegate
     }
@@ -34,6 +35,27 @@ class ContatoService{
                     ContatoViewModel.clear()
                     ContatoViewModel.save(contatos: contatos)
                 }
+                self.delegate.getContatosSuccess()
+                
+            case .failure(let error):
+                
+                self.delegate.getContatosFailure(error: error.localizedDescription)
+            }
+        }
+    }
+    func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String){
+        
+        ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+        
+            switch response.result{
+                
+            case .success:
+                
+                if let contato = response.result.value{
+                    
+                    ContatoViewModel.save(contatos: [contato])
+                }
+                
                 self.delegate.getContatosSuccess()
                 
             case .failure(let error):
