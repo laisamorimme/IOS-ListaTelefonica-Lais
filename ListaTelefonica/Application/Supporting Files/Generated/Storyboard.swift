@@ -75,6 +75,7 @@ enum StoryboardScene {
 enum StoryboardSegue {
   enum Contados: String, SegueType {
     case segueAdicionar
+    case segueDetalhe
   }
   enum Main: String, SegueType {
     case segueEntrar

@@ -11,6 +11,7 @@ import RealmSwift
 
 struct ContatoView {
     
+    var id : Int = 0
     var nome: String = ""
     var email: String = ""
     var avatar: String = ""
@@ -36,6 +37,7 @@ class ContatoViewModel {
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
         contatoView.avatar = contato.avatar ?? ""
+        contatoView.id = contato.id.value ?? 0
         
         return contatoView
     }

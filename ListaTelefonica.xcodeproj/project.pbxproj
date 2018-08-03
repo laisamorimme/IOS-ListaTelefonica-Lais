@@ -10,6 +10,7 @@
 		26310EDD21108DCB000DAC1E /* LinhaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */; };
 		26310EDE21108DCB000DAC1E /* LinhaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */; };
 		2665B9482111CAFD00C9A94E /* CriarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */; };
+		2686DECC21148A6D0027AC14 /* DetalhamentoContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */; };
 		521F37C82100C2F00001E0D0 /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37C72100C2F00001E0D0 /* SessionControl.swift */; };
 		521F37CB2100C4910001E0D0 /* Contados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F37CA2100C4910001E0D0 /* Contados.storyboard */; };
 		521F37D22100C5DA0001E0D0 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D12100C5DA0001E0D0 /* Contato.swift */; };
@@ -60,6 +61,7 @@
 		26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTableViewCell.swift; sourceTree = "<group>"; };
 		26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinhaTableViewCell.xib; sourceTree = "<group>"; };
 		2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContatoViewController.swift; sourceTree = "<group>"; };
+		2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoContatoViewController.swift; sourceTree = "<group>"; };
 		521F37C72100C2F00001E0D0 /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
 		521F37CA2100C4910001E0D0 /* Contados.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contados.storyboard; sourceTree = "<group>"; };
 		521F37D12100C5DA0001E0D0 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */,
 				26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */,
 				2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */,
+				2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				522BFD7C20FE646D00A17394 /* ListaTelefonica.xcdatamodeld in Sources */,
 				521F37DC2100D0BF0001E0D0 /* ContatoViewModel.swift in Sources */,
 				521F37DA2100CACF0001E0D0 /* ContatoRequestFactory.swift in Sources */,
+				2686DECC21148A6D0027AC14 /* DetalhamentoContatoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

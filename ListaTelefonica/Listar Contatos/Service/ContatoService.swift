@@ -13,6 +13,7 @@ import AlamofireObjectMapper
 protocol ContatoServiceDelegate {
     func getContatosSuccess()
     func getContatosFailure(error: String)
+   
 }
 
 class ContatoService{
@@ -64,4 +65,5 @@ class ContatoService{
             }
         }
     }
+    
 }

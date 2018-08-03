@@ -12,6 +12,7 @@ import Reusable
 
 class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
     
+     
     //tabela:
     @IBOutlet weak var tableView: UITableView!
     
@@ -57,9 +58,15 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         if let controller = segue.destination as? CriarContatoViewController {
             
             controller.delegate = self
+            
+        } else if let controller = segue.destination as? DetalhamentoContatoViewController {
+            
+            let id = sender as! Int
+            controller.idContatoPostman = id
         }
     }
     
+    //
     func atualizar() {
         
         self.contatos = ContatoViewModel.get()
@@ -105,5 +112,15 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 120
+    }
+    
+    //quando apertar em uma linha da table view ela vai pegar o id dela para poder pegar os dados dela:
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+        //ao apertar na cell ela n fica selecionada:
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.perform(segue: StoryboardSegue.Contados.segueDetalhe, sender: self.contatos[indexPath.row].id)
+        
     }
 }

@@ -31,15 +31,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-OF-h0B">
-                                <rect key="frame" x="150" y="484" width="74" height="30"/>
-                                <state key="normal" title="Entrar"/>
-                                <connections>
-                                    <action selector="buttonEntrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wr-b8-9ll"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-wD-s96">
-                                <rect key="frame" x="150" y="561" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-wD-s96">
+                                <rect key="frame" x="124" y="551" width="121" height="42"/>
                                 <state key="normal" title="Cadastrar"/>
                                 <connections>
                                     <action selector="buttonCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agx-dv-460"/>
@@ -51,6 +44,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-OF-h0B">
+                                <rect key="frame" x="124" y="477" width="121" height="39"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="buttonEntrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wr-b8-9ll"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,14 +58,15 @@
                             <constraint firstItem="GPh-Ac-bc1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3H6-zJ-bIh"/>
                             <constraint firstItem="GPh-Ac-bc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3ZZ-X1-MJ3"/>
                             <constraint firstItem="lbw-G8-dky" firstAttribute="trailing" secondItem="GPh-Ac-bc1" secondAttribute="trailing" id="5CE-qk-N7u"/>
-                            <constraint firstItem="ORC-OF-h0B" firstAttribute="centerX" secondItem="GPh-Ac-bc1" secondAttribute="centerX" id="AeI-KI-bCD"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="centerX" secondItem="GPh-Ac-bc1" secondAttribute="centerX" constant="-3" id="AeI-KI-bCD"/>
                             <constraint firstItem="GPh-Ac-bc1" firstAttribute="top" secondItem="lbw-G8-dky" secondAttribute="bottom" constant="56" id="CZe-WN-K1g"/>
-                            <constraint firstItem="ORC-OF-h0B" firstAttribute="top" secondItem="GPh-Ac-bc1" secondAttribute="bottom" constant="66" id="IEg-M3-jFX"/>
-                            <constraint firstItem="Uqh-wD-s96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="U5v-Dx-0Lm"/>
-                            <constraint firstItem="Uqh-wD-s96" firstAttribute="top" secondItem="ORC-OF-h0B" secondAttribute="bottom" constant="47" id="Wze-p6-JDL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uqh-wD-s96" secondAttribute="trailing" constant="150" id="ZgQ-z3-TuJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ORC-OF-h0B" secondAttribute="trailing" constant="130" id="HiZ-IK-ReX"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="top" secondItem="GPh-Ac-bc1" secondAttribute="bottom" constant="59" id="IEg-M3-jFX"/>
+                            <constraint firstItem="Uqh-wD-s96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="U5v-Dx-0Lm"/>
+                            <constraint firstItem="Uqh-wD-s96" firstAttribute="top" secondItem="ORC-OF-h0B" secondAttribute="bottom" constant="35" id="Wze-p6-JDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uqh-wD-s96" secondAttribute="trailing" constant="130" id="ZgQ-z3-TuJ"/>
                             <constraint firstItem="lbw-G8-dky" firstAttribute="leading" secondItem="GPh-Ac-bc1" secondAttribute="leading" constant="1" id="gth-Y2-swl"/>
-                            <constraint firstItem="ORC-OF-h0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="htl-fT-c1H"/>
+                            <constraint firstItem="ORC-OF-h0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="htl-fT-c1H"/>
                             <constraint firstItem="aHF-oN-Jz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlA-H2-WHt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GPh-Ac-bc1" secondAttribute="trailing" constant="30" id="m2D-RQ-18g"/>
                             <constraint firstItem="lbw-G8-dky" firstAttribute="top" secondItem="aHF-oN-Jz7" secondAttribute="bottom" constant="92" id="maf-W6-WOE"/>

@@ -16,14 +16,13 @@ protocol CriarContatoViewControllerDelegate {
 class CriarContatoViewController: UIViewController {
 
     var service: ContatoService!
+    var contato: Contato?
     
     //Outlet:
     @IBOutlet weak var textFieldNome: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldTelefone: UITextField!
-    
     @IBOutlet weak var textFieldImagem: UITextField!
-
     @IBOutlet weak var buttonAdicionar: UIButton!
 
     var delegate: CriarContatoViewControllerDelegate!
@@ -39,8 +38,6 @@ class CriarContatoViewController: UIViewController {
         
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,7 +58,10 @@ extension CriarContatoViewController: ContatoServiceDelegate {
     func getContatosSuccess() {
         print("Salvouuuuuu")
         
+        //atualizar a lista de contatos:
         self.delegate.atualizar()
+        //volta p a pagina anterior:
+        self.navigationController?.popViewController(animated: true)
     }
     
     func getContatosFailure(error: String) {
