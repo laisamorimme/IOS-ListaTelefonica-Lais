@@ -15,6 +15,8 @@ struct ContatoView {
     var nome: String = ""
     var email: String = ""
     var avatar: String = ""
+    var telefone: String = ""
+    var aniversario: String = ""
 
     var avatarUrl: URL? {
         
@@ -36,6 +38,7 @@ class ContatoViewModel {
         
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
+        contatoView.telefone = contato.telefone ?? ""
         contatoView.avatar = contato.avatar ?? ""
         contatoView.id = contato.id.value ?? 0
         
@@ -80,6 +83,11 @@ class ContatoViewModel {
         contatos.append(contentsOf: contatosModel)
         
         return self.getAsView(sequence: contatos)
+    }
+    
+    static func get(id: Int) -> ContatoView{
+        let contatoDetalhes = uiRealm.object(ofType: Contato.self, forPrimaryKey: id)
+        return getAsView(contatoDetalhes)
     }
 }
 

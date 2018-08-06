@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
+//metodos que seram implementados lá em baixo:
 protocol ContatoServiceDelegate {
     func getContatosSuccess()
     func getContatosFailure(error: String)

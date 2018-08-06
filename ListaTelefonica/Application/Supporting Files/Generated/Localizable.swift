@@ -14,6 +14,8 @@ enum L10n {
   }
 
   enum Contatos {
+    /// Editar
+    static let editar = L10n.tr("Localizable", "contatos.editar")
     /// Contatos
     static let title = L10n.tr("Localizable", "contatos.title")
   }

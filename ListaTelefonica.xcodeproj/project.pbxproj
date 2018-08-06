@@ -128,8 +128,8 @@
 		521F37C92100C4630001E0D0 /* Listar Contatos */ = {
 			isa = PBXGroup;
 			children = (
-				521F37CA2100C4910001E0D0 /* Contados.storyboard */,
 				521F37CF2100C4D20001E0D0 /* Service */,
+				521F37CA2100C4910001E0D0 /* Contados.storyboard */,
 				521F37CE2100C4C50001E0D0 /* ViewModel */,
 				521F37CD2100C4B60001E0D0 /* Controller */,
 				521F37CC2100C4A60001E0D0 /* Model */,

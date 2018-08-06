@@ -18,31 +18,41 @@ class DetalhamentoContatoViewController: UIViewController {
     @IBOutlet weak var labelNomeContato: UILabel!
     @IBOutlet weak var labelEmailContato: UILabel!
     @IBOutlet weak var labelTelefoneContato: UILabel!
-    @IBOutlet weak var labelAniversarioContato: UILabel!
     
+    @IBOutlet weak var buttonExcluir: UIButton!
     var idContatoPostman : Int!
-    var contatos : ContatoView!
+    var contato : ContatoView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+        //trazendo do banco para o label:
+        contato = ContatoViewModel.get(id: idContatoPostman)
+        labelNomeContato.text = contato.nome
+        labelEmailContato.text = contato.email
+        labelTelefoneContato.text = contato.telefone
+        imagemContato.kf.setImage(with: contato.avatarUrl)
+        
+        //button aditar:
+        let buttonEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalhamentoContatoViewController.irDeUmaPaginaParaAOutra))
+        self.navigationItem.rightBarButtonItem = buttonEditar
+
+        
+       
     }
 
+     @objc func irDeUmaPaginaParaAOutra(){
+        
+    }
+        
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonExcluir(_ sender: Any) {
+        
     }
-    */
-
+    
+    
 }
