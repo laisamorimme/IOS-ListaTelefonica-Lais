@@ -45,6 +45,7 @@ class ContatoService{
             }
         }
     }
+    
     func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String){
         
         ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
@@ -67,4 +68,20 @@ class ContatoService{
         }
     }
     
+    func delContato(id: Int) {
+        
+        ContatoRequestFactory.del(contatoId: id).validate().responseJSON { (response: DataResponse<Any>) in
+            
+            switch response.result{
+            
+            case .success:
+                
+                self.delegate.getContatosSuccess()
+                
+            case .failure(let error):
+                
+                self.delegate.getContatosFailure(error: error.localizedDescription)
+            }
+        }
+    }
 }

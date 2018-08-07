@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
+import Foundation
+import Reusable
+import Kingfisher
+import SVProgressHUD
 
-protocol DetalhamentoContatoViewControllerDelegate {
-    func atualizar()
-}
+
 class DetalhamentoContatoViewController: UIViewController {
     
     //Outlet:
@@ -22,6 +25,9 @@ class DetalhamentoContatoViewController: UIViewController {
     @IBOutlet weak var buttonExcluir: UIButton!
     var idContatoPostman : Int!
     var contato : ContatoView!
+    var service: ContatoService!
+    
+    var delegate: CriarContatoViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,22 +43,49 @@ class DetalhamentoContatoViewController: UIViewController {
         let buttonEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalhamentoContatoViewController.irDeUmaPaginaParaAOutra))
         self.navigationItem.rightBarButtonItem = buttonEditar
 
-        
-       
+        self.service = ContatoService(delegate: self)
     }
 
-     @objc func irDeUmaPaginaParaAOutra(){
-        
+    @objc func irDeUmaPaginaParaAOutra() {
+       self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
     }
-        
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? CriarContatoViewController {
+            
+            controller.delegate = self
+            
+        }
+    }
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func buttonExcluir(_ sender: Any) {
-        
+    
+        self.service.delContato(id: idContatoPostman)
+    }
+}
+
+extension DetalhamentoContatoViewController: ContatoServiceDelegate {
+    
+    func getContatosSuccess() {
+      
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.labelNomeContato.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+            
+            self.delegate.atualizar()
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
-    
+    func getContatosFailure(error: String) {
+        print("Errooo")
+    }
+  
 }
+extension 

@@ -129,7 +129,7 @@
                         <outlet property="labelEmailContato" destination="Y8u-uG-5oP" id="jfp-7G-8pk"/>
                         <outlet property="labelNomeContato" destination="ph9-OF-c85" id="OZi-Fd-LyZ"/>
                         <outlet property="labelTelefoneContato" destination="BR6-ZD-muM" id="H3i-Da-tXR"/>
-                        <segue destination="C2n-F8-Rfx" kind="show" id="rHA-1F-lpn"/>
+                        <segue destination="C2n-F8-Rfx" kind="show" identifier="segueEditar" id="rHA-1F-lpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1y-NB-K0e" userLabel="First Responder" sceneMemberID="firstResponder"/>

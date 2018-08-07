@@ -200,10 +200,10 @@
 		522BFD7220FE646D00A17394 /* ListaTelefonica */ = {
 			isa = PBXGroup;
 			children = (
+				522F89EE20FF5D380028D5A7 /* Login */,
 				521F37C92100C4630001E0D0 /* Listar Contatos */,
 				522F89ED20FF5CB70028D5A7 /* Application */,
 				522BFD7A20FE646D00A17394 /* ListaTelefonica.xcdatamodeld */,
-				522F89EE20FF5D380028D5A7 /* Login */,
 			);
 			path = ListaTelefonica;
 			sourceTree = "<group>";

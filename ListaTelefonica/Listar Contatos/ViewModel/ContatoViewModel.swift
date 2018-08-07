@@ -69,6 +69,7 @@ class ContatoViewModel {
     
     static func clear() {
         
+        //toda vez que eu for modificar no banco local:
         try! uiRealm.write {
             
             uiRealm.delete(uiRealm.objects(Contato.self))
@@ -88,6 +89,20 @@ class ContatoViewModel {
     static func get(id: Int) -> ContatoView{
         let contatoDetalhes = uiRealm.object(ofType: Contato.self, forPrimaryKey: id)
         return getAsView(contatoDetalhes)
+    }
+    
+    //apagando um contato do banco local depois de apagar do servico:
+    static func delete(by contatoId: Int) {
+        
+        let result = uiRealm.object(ofType: Contato.self, forPrimaryKey: contatoId)
+        
+        if let contato = result {
+            
+            try! uiRealm.write {
+                
+                uiRealm.delete(contato)
+            }
+        }
     }
 }
 

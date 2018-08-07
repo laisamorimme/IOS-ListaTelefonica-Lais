@@ -11,7 +11,6 @@ import UIKit
 import Reusable
 
 class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
-    
      
     //tabela:
     @IBOutlet weak var tableView: UITableView!
@@ -63,6 +62,7 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
             
             let id = sender as! Int
             controller.idContatoPostman = id
+            controller.delegate = self
         }
     }
     
@@ -124,3 +124,4 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
 }
+
