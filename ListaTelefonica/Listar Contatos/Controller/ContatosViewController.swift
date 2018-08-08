@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 import Reusable
+import Kingfisher
+import SVProgressHUD
 
 class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
-     
-    //tabela:
+    
+    //outlet tabela:
     @IBOutlet weak var tableView: UITableView!
     
     //variavel servico que herda os metodos da classe ContatoService:
@@ -38,7 +40,7 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        //buttonCadastrar:
+//        buttonCadastrar:
 //        self.buttonCadastrar.setTitle(L10n.Login.cadastrar, for: .normal)
 //        self.buttonCadastrar.layer.cornerRadius = self.buttonCadastrar.bounds.height/2
 //        self.buttonCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
@@ -46,27 +48,34 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         
     }
     
+    //passando da listar contanto para a de adicionar contato:
     @IBAction func abrirAdicionar(_ sender: Any) {
-        //passando da listar contanto para a de adicionar contato
         self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
+    }
+    
+    //esta funcao atualiza a tela cada vez que for aberta:
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.service.getContato()
     }
     
     //passa para outra tela ? para poder atualizar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let controller = segue.destination as? CriarContatoViewController {
-            
             controller.delegate = self
-            
+            controller.title = "Criar Contato"
+            controller.titleButton = "Adicionar"
         } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             
-            let id = sender as! Int
-            controller.idContatoPostman = id
-            controller.delegate = self
+            if let id = sender as? Int {
+                controller.idContatoPostman = id
+            }
         }
     }
     
-    //
+    //metodo para a table view se refazer, ou seja, atualizar:
     func atualizar() {
         
         self.contatos = ContatoViewModel.get()
@@ -76,28 +85,28 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
-    func putContatosFailure(error: String) {
-        
-    }
-    
-    func delContatosFailure(error: String) {
-        
-    }
-    
-    func postContatosFailure(error: String) {
-        
-    }
+    //put:
     func putContatosSuccess() {
         
     }
-    
+    func putContatosFailure(error: String) {
+        
+    }
+    //del:
     func delContatosSuccess() {
         
     }
+    func delContatosFailure(error: String) {
+        
+    }
+    //post
     func postContatosSuccess() {
         
     }
-    
+    func postContatosFailure(error: String) {
+        
+    }
+    //get:
     func getContatosSuccess() {
         
         self.contatos = ContatoViewModel.get()
@@ -117,6 +126,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
         return self.contatos.count
     }
     
+    //desenho da celula personalizada:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(for: indexPath) as LinhaTableViewCell
@@ -126,6 +136,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    //altura da celula da table view:
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 120
@@ -136,7 +147,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
       
         //ao apertar na cell ela n fica selecionada:
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
+        //emcaminha para a outra tela:
         self.perform(segue: StoryboardSegue.Contados.segueDetalhe, sender: self.contatos[indexPath.row].id)
         
     }

@@ -21,14 +21,16 @@ class DetalhamentoContatoViewController: UIViewController {
     @IBOutlet weak var labelNomeContato: UILabel!
     @IBOutlet weak var labelEmailContato: UILabel!
     @IBOutlet weak var labelTelefoneContato: UILabel!
-    
     @IBOutlet weak var buttonExcluir: UIButton!
+    
     var idContatoPostman : Int!
     var contato : ContatoView!
     var service: ContatoService!
-    
+    var id: Int = 0
     var delegate: CriarContatoViewControllerDelegate!
+    var programVar: Int?
     
+     //metodo que é chamado toda vez que se carrega uma tela:
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +46,12 @@ class DetalhamentoContatoViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = buttonEditar
 
         self.service = ContatoService(delegate: self)
+        self.contato = ContatoViewModel.get(id: id)
+        self.title = "\(contato.nome)"
+        self.labelNomeContato.text = contato.nome
+        self.labelEmailContato.text = contato.email
+        self.labelTelefoneContato.text = contato.telefone
+          //continuar aquiiiiiiiiiiiiiiii
     }
 
     @objc func irDeUmaPaginaParaAOutra() {
@@ -75,16 +83,17 @@ extension DetalhamentoContatoViewController: ContatoServiceDelegate {
     }
     
     func delContatosFailure(error: String) {
-//        print("Errooo")
-//        
-//        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.labelNomeContato.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-//        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
-//            
-//            self.delegate.atualizar()
-//            self.navigationController?.popViewController(animated: true)
-//        }
-//        alert.addAction(action)
-//        self.present(alert, animated: true, completion: nil)
+        print("Errooo mais ta certo")
+        
+        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.labelNomeContato.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+            
+            self.delegate.atualizar()
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+        delegate.atualizar()
     }
     
     func postContatosFailure(error: String) {

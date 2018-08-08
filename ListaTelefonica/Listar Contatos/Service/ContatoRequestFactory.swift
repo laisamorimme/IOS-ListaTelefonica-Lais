@@ -27,4 +27,10 @@ class ContatoRequestFactory {
         
         return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .delete, headers: header)
     }
-}
+    
+    static func put(contatoId: Int, nome: String, aniversario: Int, email: String, telefone: String, imagem: String) -> DataRequest{
+        let parametros:Parameters = ["nome": nome, "birth": aniversario, "email": email, "phone": telefone, "picture": imagem]
+        
+        return Alamofire.request(baseUrl + "contacts/\(contatoId)",method: .put, parameters: parametros, encoding: JSONEncoding.default, headers: header)
+    }
+  }
