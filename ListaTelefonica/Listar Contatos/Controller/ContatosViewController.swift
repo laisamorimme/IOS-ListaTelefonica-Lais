@@ -76,16 +76,33 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
+    func putContatosFailure(error: String) {
+        
+    }
+    
+    func delContatosFailure(error: String) {
+        
+    }
+    
+    func postContatosFailure(error: String) {
+        
+    }
+    func putContatosSuccess() {
+        
+    }
+    
+    func delContatosSuccess() {
+        
+    }
+    func postContatosSuccess() {
+        
+    }
     
     func getContatosSuccess() {
         
         self.contatos = ContatoViewModel.get()
         
         self.tableView.reloadData()
-        
-        //        for contato in ContatoViewModel.get() {
-        //            print(contato.nome)
-        //        }
     }
     
     func getContatosFailure(error: String) {

@@ -14,7 +14,41 @@ import AlamofireObjectMapper
 protocol ContatoServiceDelegate {
     func getContatosSuccess()
     func getContatosFailure(error: String)
+    func postContatosSuccess()
+    func postContatosFailure(error: String)
+    func delContatosSuccess()
+    func delContatosFailure(error: String)
+    func putContatosSuccess()
+    func putContatosFailure(error: String)
    
+}
+
+extension ContatoServiceDelegate {
+    
+    func getContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func getContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func postContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func postContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func delContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func delContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
+    func putContatosSuccess() {
+        fatalError("Precisa ser implementado")
+    }
+    func putContatosFailure() {
+        fatalError("Precisa ser implementado")
+    }
 }
 
 class ContatoService{
@@ -59,11 +93,11 @@ class ContatoService{
                     ContatoViewModel.save(contatos: [contato])
                 }
                 
-                self.delegate.getContatosSuccess()
+                self.delegate.postContatosSuccess()
                 
             case .failure(let error):
                 
-                self.delegate.getContatosFailure(error: error.localizedDescription)
+                self.delegate.postContatosFailure(error: error.localizedDescription)
             }
         }
     }
@@ -76,11 +110,11 @@ class ContatoService{
             
             case .success:
                 
-                self.delegate.getContatosSuccess()
+                self.delegate.delContatosSuccess()
                 
             case .failure(let error):
                 
-                self.delegate.getContatosFailure(error: error.localizedDescription)
+                self.delegate.delContatosFailure(error: error.localizedDescription)
             }
         }
     }

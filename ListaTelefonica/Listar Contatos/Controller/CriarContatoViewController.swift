@@ -54,14 +54,34 @@ class CriarContatoViewController: UIViewController {
 }
 
 extension CriarContatoViewController: ContatoServiceDelegate {
+    func putContatosFailure(error: String) {
+        
+    }
     
-    func getContatosSuccess() {
+    func delContatosFailure(error: String) {
+        
+    }
+    
+    func postContatosFailure(error: String) {
+        
+    }
+    func putContatosSuccess() {
+        
+    }
+    func delContatosSuccess() {
+        
+    }
+    func postContatosSuccess() {
         print("Salvouuuuuu")
         
         //atualizar a lista de contatos:
         self.delegate.atualizar()
         //volta p a pagina anterior:
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func getContatosSuccess() {
+   
     }
     
     func getContatosFailure(error: String) {

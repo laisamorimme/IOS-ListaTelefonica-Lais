@@ -53,7 +53,7 @@ class DetalhamentoContatoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? CriarContatoViewController {
             
-            controller.delegate = self
+          //  controller.delegate = self
             
         }
     }
@@ -70,9 +70,28 @@ class DetalhamentoContatoViewController: UIViewController {
 }
 
 extension DetalhamentoContatoViewController: ContatoServiceDelegate {
+    func putContatosFailure(error: String) {
+        
+    }
     
-    func getContatosSuccess() {
-      
+    func delContatosFailure(error: String) {
+//        print("Errooo")
+//        
+//        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.labelNomeContato.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+//        let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
+//            
+//            self.delegate.atualizar()
+//            self.navigationController?.popViewController(animated: true)
+//        }
+//        alert.addAction(action)
+//        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func postContatosFailure(error: String) {
+        
+    }
+    func delContatosSuccess() {
+        
         let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.labelNomeContato.text!) foi excluído com sucesso", preferredStyle: UIAlertControllerStyle.alert)
         let action = UIAlertAction.init(title: "Ok!", style: UIAlertActionStyle.default) { (_) in
             
@@ -83,9 +102,12 @@ extension DetalhamentoContatoViewController: ContatoServiceDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func getContatosSuccess() {
+      
+    }
+    
     func getContatosFailure(error: String) {
-        print("Errooo")
+     
     }
   
 }
-extension 
