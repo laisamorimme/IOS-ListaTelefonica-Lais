@@ -10,15 +10,15 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-protocol LoginServiceDelegate {
+protocol LoginServiceDelegate: class {
     
-    func  postLoginSuccess()
+    func postLoginSuccess()
     func postLoginFailure(error: String)
 }
 
 class LoginSevice{
     
-    var delegate: LoginServiceDelegate
+    weak var delegate: LoginServiceDelegate?
     
     required init(delegate: LoginServiceDelegate){
         self.delegate = delegate
@@ -26,30 +26,24 @@ class LoginSevice{
     
     func postLogin(email: String, senha: String){
         
-        LoginRequestFactory.postLogin(email: email, senha: senha).validate().responseObject(keyPath: "data"){ (response: DataResponse<User>) in
+        LoginRequestFactory.postLogin(email: email, senha: senha).validate().responseObject(keyPath: "data") { (response: DataResponse<User>) in
          
-            switch response.result{
+            switch response.result {
             case .success:
                 
                 if let user = response.result.value {
                     user.setHeaderParams(header: response.response?.allHeaderFields)
                     SessionControl.setHeadersParams(headers:  response.response?.allHeaderFields)
                     UserViewModel.clear()
-                
                     UserViewModel.save(usuario: user)
-                  
                 }
                 
-                self.delegate.postLoginSuccess()
+                self.delegate?.postLoginSuccess()
                 
             case .failure(let error):
                 
-                self.delegate.postLoginFailure(error: error.localizedDescription)
+                self.delegate?.postLoginFailure(error: error.localizedDescription)
             }
-            
-            
         }
-        
     }
-    
 }

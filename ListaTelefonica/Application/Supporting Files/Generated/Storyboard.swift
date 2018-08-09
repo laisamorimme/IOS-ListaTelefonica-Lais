@@ -57,9 +57,6 @@ enum StoryboardScene {
 
     static let contatosViewController = SceneType<ListaTelefonica.ContatosViewController>(storyboard: Contados.self, identifier: "ContatosViewController")
   }
-  enum LInhaTableView: StoryboardType {
-    static let storyboardName = "LInhaTableView"
-  }
   enum LaunchScreen: StoryboardType {
     static let storyboardName = "LaunchScreen"
 

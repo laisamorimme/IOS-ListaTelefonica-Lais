@@ -31,13 +31,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-wD-s96">
-                                <rect key="frame" x="124" y="551" width="121" height="42"/>
-                                <state key="normal" title="Cadastrar"/>
-                                <connections>
-                                    <action selector="buttonCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agx-dv-460"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-G8-dky">
                                 <rect key="frame" x="31" y="302" width="314" height="30"/>
                                 <nil key="textColor"/>
@@ -62,20 +55,15 @@
                             <constraint firstItem="GPh-Ac-bc1" firstAttribute="top" secondItem="lbw-G8-dky" secondAttribute="bottom" constant="56" id="CZe-WN-K1g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ORC-OF-h0B" secondAttribute="trailing" constant="130" id="HiZ-IK-ReX"/>
                             <constraint firstItem="ORC-OF-h0B" firstAttribute="top" secondItem="GPh-Ac-bc1" secondAttribute="bottom" constant="59" id="IEg-M3-jFX"/>
-                            <constraint firstItem="Uqh-wD-s96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="U5v-Dx-0Lm"/>
-                            <constraint firstItem="Uqh-wD-s96" firstAttribute="top" secondItem="ORC-OF-h0B" secondAttribute="bottom" constant="35" id="Wze-p6-JDL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uqh-wD-s96" secondAttribute="trailing" constant="130" id="ZgQ-z3-TuJ"/>
                             <constraint firstItem="lbw-G8-dky" firstAttribute="leading" secondItem="GPh-Ac-bc1" secondAttribute="leading" constant="1" id="gth-Y2-swl"/>
                             <constraint firstItem="ORC-OF-h0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="htl-fT-c1H"/>
                             <constraint firstItem="aHF-oN-Jz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlA-H2-WHt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GPh-Ac-bc1" secondAttribute="trailing" constant="30" id="m2D-RQ-18g"/>
                             <constraint firstItem="lbw-G8-dky" firstAttribute="top" secondItem="aHF-oN-Jz7" secondAttribute="bottom" constant="92" id="maf-W6-WOE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Uqh-wD-s96" secondAttribute="bottom" constant="8" id="nex-Hl-SEf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonCadastrar" destination="Uqh-wD-s96" id="Y0G-h3-5sL"/>
                         <outlet property="buttonEntrar" destination="ORC-OF-h0B" id="7lc-L1-sYh"/>
                         <outlet property="imagemTelefone" destination="aHF-oN-Jz7" id="omz-bj-jBp"/>
                         <outlet property="textFieldEmail" destination="lbw-G8-dky" id="oQe-PI-RTd"/>

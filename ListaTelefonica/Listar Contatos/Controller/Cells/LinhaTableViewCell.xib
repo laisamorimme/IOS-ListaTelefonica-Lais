@@ -23,29 +23,29 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-N2-eWg">
                         <rect key="frame" x="0.0" y="0.0" width="139" height="136"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyg-8z-uOj">
-                        <rect key="frame" x="168" y="57" width="136" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyg-8z-uOj">
+                        <rect key="frame" x="168" y="11" width="136" height="114"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pyg-8z-uOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="46" id="CcA-dH-xcH"/>
+                    <constraint firstItem="pyg-8z-uOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CcA-dH-xcH"/>
                     <constraint firstAttribute="bottom" secondItem="mIy-N2-eWg" secondAttribute="bottom" id="Gj2-KA-50r"/>
                     <constraint firstItem="pyg-8z-uOj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="76" id="IoZ-am-2QT"/>
                     <constraint firstItem="mIy-N2-eWg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NJo-fK-LxM"/>
                     <constraint firstItem="pyg-8z-uOj" firstAttribute="leading" secondItem="mIy-N2-eWg" secondAttribute="trailing" constant="29" id="UCa-Cx-FiH"/>
                     <constraint firstItem="mIy-N2-eWg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-90.5" id="isT-5B-a7N"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pyg-8z-uOj" secondAttribute="bottom" constant="40" id="l5u-t6-pQL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pyg-8z-uOj" secondAttribute="bottom" id="l5u-t6-pQL"/>
                     <constraint firstItem="mIy-N2-eWg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oaM-QE-GEE"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pyg-8z-uOj" secondAttribute="trailing" constant="8" id="t3R-Vd-Wjh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="LabelNomePessoa" destination="pyg-8z-uOj" id="3QR-hK-duH"/>
                 <outlet property="imagemPerfil" destination="mIy-N2-eWg" id="fdy-HX-9GW"/>
+                <outlet property="labelNomePessoa" destination="pyg-8z-uOj" id="GHC-1g-FMp"/>
             </connections>
             <point key="canvasLocation" x="25" y="6"/>
         </tableViewCell>

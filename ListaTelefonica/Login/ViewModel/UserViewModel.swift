@@ -11,23 +11,19 @@ import RealmSwift
 
 class UserViewModel {
  
-    static func save(usuario: User){
-    try! uiRealm.write{
-    uiRealm.add(usuario,update: true)
+    static func save(usuario: User) {
+        try! uiRealm.write{
+            uiRealm.add(usuario, update: true)
        }
-    
     }
     
-    
-    
-    static func clear(){
+    static func clear() {
         try! uiRealm.write {
-            
-           let usuarios = uiRealm.objects(User.self)
-            
+            let usuarios = uiRealm.objects(User.self)
             uiRealm.delete(usuarios)
         }
     }
+    
     static func setHeadersParams(headers: [AnyHashable : Any]?) {
         
         guard let headers = headers, let user = uiRealm.objects(User.self).first else {

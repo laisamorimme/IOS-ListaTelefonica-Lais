@@ -20,7 +20,6 @@ protocol ContatoServiceDelegate {
     func delContatosFailure(error: String)
     func putContatosSuccess()
     func putContatosFailure(error: String)
-   
 }
 
 extension ContatoServiceDelegate {
@@ -28,28 +27,28 @@ extension ContatoServiceDelegate {
     func getContatosSuccess() {
         fatalError("Precisa ser implementado")
     }
-    func getContatosFailure() {
+    func getContatosFailure(error: String) {
         fatalError("Precisa ser implementado")
     }
     //post:
     func postContatosSuccess() {
         fatalError("Precisa ser implementado")
     }
-    func postContatosFailure() {
+    func postContatosFailure(error: String) {
         fatalError("Precisa ser implementado")
     }
     //del:
     func delContatosSuccess() {
         fatalError("Precisa ser implementado")
     }
-    func delContatosFailure() {
+    func delContatosFailure(error: String) {
         fatalError("Precisa ser implementado")
     }
     //put:
     func putContatosSuccess() {
         fatalError("Precisa ser implementado")
     }
-    func putContatosFailure() {
+    func putContatosFailure(error: String) {
         fatalError("Precisa ser implementado")
     }
 }
@@ -57,6 +56,8 @@ extension ContatoServiceDelegate {
 class ContatoService{
     
     var delegate:ContatoServiceDelegate
+    
+    var getContatoRequest: Request?
     
     //init: construtor
     required init(delegate: ContatoServiceDelegate){
@@ -66,15 +67,17 @@ class ContatoService{
     //get:
     func getContato(){
         
-        ContatoRequestFactory.getContato().validate().responseArray{ (response: DataResponse<[Contato]>) in
+        self.getContatoRequest?.cancel()
+        
+        self.getContatoRequest = ContatoRequestFactory.getContato().validate().responseArray { (response: DataResponse<[Contato]>) in
             switch response.result{
                 
             case .success:
-                if let contatos = response.result.value{
-                    
+                if let contatos = response.result.value {
                     ContatoViewModel.clear()
                     ContatoViewModel.save(contatos: contatos)
                 }
+                
                 self.delegate.getContatosSuccess()
                 
             case .failure(let error):
@@ -85,17 +88,17 @@ class ContatoService{
     }
     
     //post:
-    func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String){
+    // postContato(contato: ContatoView)
+    func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
         
-        ContatoRequestFactory.criarContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+        ContatoRequestFactory.postContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
         
             switch response.result{
                 
             case .success:
                 
                 if let contato = response.result.value{
-                    
-                    ContatoViewModel.save(contatos: [contato])
+                    ContatoViewModel.save(contato: contato)
                 }
                 
                 self.delegate.postContatosSuccess()
@@ -110,7 +113,7 @@ class ContatoService{
     //del:
     func delContato(id: Int) {
         
-        ContatoRequestFactory.del(contatoId: id).validate().responseJSON { (response: DataResponse<Any>) in
+        ContatoRequestFactory.delete(contatoId: id).validate().responseJSON { (response: DataResponse<Any>) in
             
             switch response.result{
             

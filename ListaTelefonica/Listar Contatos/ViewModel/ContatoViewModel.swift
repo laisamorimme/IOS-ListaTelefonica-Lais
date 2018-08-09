@@ -59,19 +59,21 @@ class ContatoViewModel {
     }
     
     // MARK: - Realm
-    static func save(contatos: [Contato]) {
-        
+    static func save(contato: Contato) {
         try! uiRealm.write {
             uiRealm.add(contatos, update: true)
-            
+        }
+    }
+    
+    static func save(contatos: [Contato]) {
+        try! uiRealm.write {
+            uiRealm.add(contatos, update: true)
         }
     }
     
     static func clear() {
-        
         //toda vez que eu for modificar no banco local:
         try! uiRealm.write {
-            
             uiRealm.delete(uiRealm.objects(Contato.self))
         }
     }

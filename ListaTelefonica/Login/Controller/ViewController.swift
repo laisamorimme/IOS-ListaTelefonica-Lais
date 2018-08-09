@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldSenha: UITextField!
     @IBOutlet weak var buttonEntrar: UIButton!
-    @IBOutlet weak var buttonCadastrar: UIButton!
     
     
     //Metodo de inicializacao:
@@ -42,35 +41,22 @@ class ViewController: UIViewController {
         self.buttonEntrar.setTitle(L10n.Login.entrar, for: .normal)
         self.buttonEntrar.layer.cornerRadius = self.buttonEntrar.bounds.height/2
         self.buttonEntrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
-        
-        //buttonCadastrar:
-        self.buttonCadastrar.setTitle(L10n.Login.cadastrar, for: .normal)
-        self.buttonCadastrar.layer.cornerRadius = self.buttonCadastrar.bounds.height/2
-        self.buttonCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
-        
-        
     }
 
-   
     //button:
     @IBAction func buttonEntrar(_ sender: Any) {
         
-        if let email = self.textFieldEmail.text ,let senha = self.textFieldSenha.text {
+        if let email = self.textFieldEmail.text, let senha = self.textFieldSenha.text {
             self.service.postLogin(email: email, senha: senha)
         }
     }
-    @IBAction func buttonCadastrar(_ sender: Any) {
-        
-    }
-    
 }
 
 extension ViewController: LoginServiceDelegate {
     
     func postLoginSuccess() {
-        
+
         self.perform(segue: StoryboardSegue.Main.segueEntrar)
-        print("Olha o baco ae")
     }
     
     func postLoginFailure(error: String) {

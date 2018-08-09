@@ -14,8 +14,7 @@ class LinhaTableViewCell: UITableViewCell, NibReusable {
     
     //Foto e label:
     @IBOutlet weak var imagemPerfil: UIImageView!
-    @IBOutlet weak var LabelNomePessoa: UILabel!
-    
+    @IBOutlet weak var labelNomePessoa: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +23,7 @@ class LinhaTableViewCell: UITableViewCell, NibReusable {
     
     func bind(contato: ContatoView) {
         
-        self.LabelNomePessoa.text = contato.nome
+        self.labelNomePessoa.text = contato.nome
         
         if let url = contato.avatarUrl {
             

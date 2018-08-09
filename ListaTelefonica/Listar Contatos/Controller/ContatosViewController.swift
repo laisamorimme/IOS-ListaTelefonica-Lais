@@ -12,7 +12,7 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-class ContatosViewController: UIViewController, CriarContatoViewControllerDelegate {
+class ContatosViewController: UIViewController {
     
     //outlet tabela:
     @IBOutlet weak var tableView: UITableView!
@@ -31,26 +31,11 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         
         self.service = ContatoService(delegate: self)
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.tableView.register(cellType: LinhaTableViewCell.self)
         
         self.service.getContato()
-        
-        self.title = "Contatos"
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-//        buttonCadastrar:
-//        self.buttonCadastrar.setTitle(L10n.Login.cadastrar, for: .normal)
-//        self.buttonCadastrar.layer.cornerRadius = self.buttonCadastrar.bounds.height/2
-//        self.buttonCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
-        
-        
-    }
-    
-    //passando da listar contanto para a de adicionar contato:
-    @IBAction func abrirAdicionar(_ sender: Any) {
-        self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
     }
     
     //esta funcao atualiza a tela cada vez que for aberta:
@@ -58,54 +43,35 @@ class ContatosViewController: UIViewController, CriarContatoViewControllerDelega
         super.viewWillAppear(animated)
         
         self.service.getContato()
+        
+        self.contatos = ContatoViewModel.get()
+        
+        self.tableView.reloadData()
     }
     
     //passa para outra tela ? para poder atualizar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let controller = segue.destination as? CriarContatoViewController {
-            controller.delegate = self
-            controller.title = "Criar Contato"
-            controller.titleButton = "Adicionar"
-        } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             
+            controller.delegate = self
+//            controller.title = "Criar Contato" - Feito na Tela
+//            controller.titleButton = "Adicionar" - Feito na Tela
+            
+        } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             if let id = sender as? Int {
                 controller.idContatoPostman = id
             }
         }
     }
     
-    //metodo para a table view se refazer, ou seja, atualizar:
-    func atualizar() {
-        
-        self.contatos = ContatoViewModel.get()
-        
-        self.tableView.reloadData()
+    //passando da listar contanto para a de adicionar contato:
+    @IBAction func abrirAdicionar(_ sender: Any) {
+        self.perform(segue: StoryboardSegue.Contados.segueAdicionar)
     }
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
-    //put:
-    func putContatosSuccess() {
-        
-    }
-    func putContatosFailure(error: String) {
-        
-    }
-    //del:
-    func delContatosSuccess() {
-        
-    }
-    func delContatosFailure(error: String) {
-        
-    }
-    //post
-    func postContatosSuccess() {
-        
-    }
-    func postContatosFailure(error: String) {
-        
-    }
     //get:
     func getContatosSuccess() {
         
@@ -115,6 +81,7 @@ extension ContatosViewController: ContatoServiceDelegate {
     }
     
     func getContatosFailure(error: String) {
+        
         print("Errooo")
     }
 }

@@ -34,6 +34,5 @@ class Contato: Object,Mappable{
         self.email            <- map["email"]
         self.telefone         <- map["phone"]
         self.avatar           <- map["picture"]
-        
     }
 }

@@ -9,16 +9,15 @@
 /* Begin PBXBuildFile section */
 		26310EDD21108DCB000DAC1E /* LinhaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */; };
 		26310EDE21108DCB000DAC1E /* LinhaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */; };
+		265646EE211C7AE200584728 /* Contados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265646ED211C7AE200584728 /* Contados.storyboard */; };
 		2665B9482111CAFD00C9A94E /* CriarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */; };
 		2686DECC21148A6D0027AC14 /* DetalhamentoContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */; };
 		521F37C82100C2F00001E0D0 /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37C72100C2F00001E0D0 /* SessionControl.swift */; };
-		521F37CB2100C4910001E0D0 /* Contados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F37CA2100C4910001E0D0 /* Contados.storyboard */; };
 		521F37D22100C5DA0001E0D0 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D12100C5DA0001E0D0 /* Contato.swift */; };
 		521F37D62100C6D10001E0D0 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D52100C6D10001E0D0 /* ContatosViewController.swift */; };
 		521F37D82100CAA00001E0D0 /* ContatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D72100CAA00001E0D0 /* ContatoService.swift */; };
 		521F37DA2100CACF0001E0D0 /* ContatoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37D92100CACF0001E0D0 /* ContatoRequestFactory.swift */; };
 		521F37DC2100D0BF0001E0D0 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F37DB2100D0BF0001E0D0 /* ContatoViewModel.swift */; };
-		521F37DF21021B840001E0D0 /* LInhaTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */; };
 		522BFD7420FE646D00A17394 /* AppDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD7320FE646D00A17394 /* AppDelegate .swift */; };
 		522BFD7620FE646D00A17394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BFD7520FE646D00A17394 /* ViewController.swift */; };
 		522BFD7920FE646D00A17394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522BFD7720FE646D00A17394 /* Main.storyboard */; };
@@ -60,16 +59,15 @@
 /* Begin PBXFileReference section */
 		26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTableViewCell.swift; sourceTree = "<group>"; };
 		26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinhaTableViewCell.xib; sourceTree = "<group>"; };
+		265646ED211C7AE200584728 /* Contados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contados.storyboard; sourceTree = "<group>"; };
 		2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContatoViewController.swift; sourceTree = "<group>"; };
 		2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoContatoViewController.swift; sourceTree = "<group>"; };
 		521F37C72100C2F00001E0D0 /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
-		521F37CA2100C4910001E0D0 /* Contados.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contados.storyboard; sourceTree = "<group>"; };
 		521F37D12100C5DA0001E0D0 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 		521F37D52100C6D10001E0D0 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		521F37D72100CAA00001E0D0 /* ContatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoService.swift; sourceTree = "<group>"; };
 		521F37D92100CACF0001E0D0 /* ContatoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRequestFactory.swift; sourceTree = "<group>"; };
 		521F37DB2100D0BF0001E0D0 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
-		521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LInhaTableView.storyboard; sourceTree = "<group>"; };
 		522BFD7020FE646D00A17394 /* ListaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522BFD7320FE646D00A17394 /* AppDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate .swift"; sourceTree = "<group>"; };
 		522BFD7520FE646D00A17394 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,15 +123,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265646EF211C7E5800584728 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */,
+				26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		521F37C92100C4630001E0D0 /* Listar Contatos */ = {
 			isa = PBXGroup;
 			children = (
-				521F37CF2100C4D20001E0D0 /* Service */,
-				521F37CA2100C4910001E0D0 /* Contados.storyboard */,
-				521F37CE2100C4C50001E0D0 /* ViewModel */,
-				521F37CD2100C4B60001E0D0 /* Controller */,
+				265646ED211C7AE200584728 /* Contados.storyboard */,
 				521F37CC2100C4A60001E0D0 /* Model */,
-				521F37DE21021B840001E0D0 /* LInhaTableView.storyboard */,
+				521F37CE2100C4C50001E0D0 /* ViewModel */,
+				521F37CF2100C4D20001E0D0 /* Service */,
+				521F37CD2100C4B60001E0D0 /* Controller */,
 			);
 			path = "Listar Contatos";
 			sourceTree = "<group>";
@@ -149,9 +155,8 @@
 		521F37CD2100C4B60001E0D0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				265646EF211C7E5800584728 /* Cells */,
 				521F37D52100C6D10001E0D0 /* ContatosViewController.swift */,
-				26310EDB21108DCB000DAC1E /* LinhaTableViewCell.swift */,
-				26310EDC21108DCB000DAC1E /* LinhaTableViewCell.xib */,
 				2665B9472111CAFD00C9A94E /* CriarContatoViewController.swift */,
 				2686DECB21148A6D0027AC14 /* DetalhamentoContatoViewController.swift */,
 			);
@@ -240,9 +245,9 @@
 			isa = PBXGroup;
 			children = (
 				522BFD7720FE646D00A17394 /* Main.storyboard */,
-				52CEE9EB20FF654100A4B4BA /* Service */,
-				52CEE9EA20FF652E00A4B4BA /* ViewModel */,
 				52CEE9E920FF652100A4B4BA /* Model */,
+				52CEE9EA20FF652E00A4B4BA /* ViewModel */,
+				52CEE9EB20FF654100A4B4BA /* Service */,
 				52CEE9EC20FF654C00A4B4BA /* Controller */,
 			);
 			path = Login;
@@ -437,14 +442,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521F37DF21021B840001E0D0 /* LInhaTableView.storyboard in Resources */,
 				522BFD8120FE646F00A17394 /* LaunchScreen.storyboard in Resources */,
+				265646EE211C7AE200584728 /* Contados.storyboard in Resources */,
 				52CEE9F020FF671600A4B4BA /* Localizable.strings in Resources */,
 				52CEE9F420FF689700A4B4BA /* Colors.json in Resources */,
 				522BFD7E20FE646F00A17394 /* Assets.xcassets in Resources */,
 				522BFD7920FE646D00A17394 /* Main.storyboard in Resources */,
 				26310EDE21108DCB000DAC1E /* LinhaTableViewCell.xib in Resources */,
-				521F37CB2100C4910001E0D0 /* Contados.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
