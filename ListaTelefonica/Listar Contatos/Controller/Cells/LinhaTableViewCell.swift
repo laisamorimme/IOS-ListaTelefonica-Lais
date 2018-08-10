@@ -9,10 +9,11 @@
 import UIKit
 import Reusable
 import Kingfisher
+import MGSwipeTableCell
 
-class LinhaTableViewCell: UITableViewCell, NibReusable {
+class LinhaTableViewCell: MGSwipeTableCell, NibReusable {
     
-    //Foto e label:
+    //outlet:
     @IBOutlet weak var imagemPerfil: UIImageView!
     @IBOutlet weak var labelNomePessoa: UILabel!
     

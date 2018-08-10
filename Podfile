@@ -13,5 +13,6 @@ target 'ListaTelefonica' do
   pod 'Kingfisher', '= 4.6.2'
   pod 'Reusable', '= 4.0.0'
   pod 'SVProgressHUD', '= 2.2.5'
+  pod 'MGSwipeTableCell'
   
 end

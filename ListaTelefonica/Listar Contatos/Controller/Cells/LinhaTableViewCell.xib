@@ -39,7 +39,7 @@
                     <constraint firstItem="mIy-N2-eWg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-90.5" id="isT-5B-a7N"/>
                     <constraint firstAttribute="bottomMargin" secondItem="pyg-8z-uOj" secondAttribute="bottom" id="l5u-t6-pQL"/>
                     <constraint firstItem="mIy-N2-eWg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oaM-QE-GEE"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pyg-8z-uOj" secondAttribute="trailing" constant="8" id="t3R-Vd-Wjh"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pyg-8z-uOj" secondAttribute="trailing" id="t3R-Vd-Wjh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

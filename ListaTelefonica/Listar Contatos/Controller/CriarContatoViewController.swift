@@ -51,7 +51,7 @@ class CriarContatoViewController: UIViewController {
     //esta funcao atualiza a tela cada vez que for aberta:
     override func viewWillAppear(_ animated: Bool) {
         self.buttonAdicionar.setTitle(self.titleButton, for: .normal)
-        if id != nil {
+        if id != 0 {
             self.textFieldNome.text = self.contacForEdit.nome
             self.textFieldEmail.text = self.contacForEdit.email
             self.textFieldTelefone.text = self.contacForEdit.telefone
@@ -60,12 +60,11 @@ class CriarContatoViewController: UIViewController {
     }
     //metodo do button:
     @IBAction func buttonAdicionar(_ sender: Any) {
-        
         //caso a variavel ainda seja 0 tem q criar se n vai editar:
-        if id != 0{
-            self.criarContato()
-        }else{
+        if id != 0 {
             self.editarContato()
+        }else {
+            self.criarContato()
         }
         
    }
@@ -96,7 +95,7 @@ class CriarContatoViewController: UIViewController {
 extension CriarContatoViewController: ContatoServiceDelegate {
     //put:
     func putContatosSuccess() {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     func putContatosFailure(error: String) {
         
@@ -110,11 +109,6 @@ extension CriarContatoViewController: ContatoServiceDelegate {
     }
     //post:
     func postContatosSuccess() {
-        print("Salvouuuuuu")
-        
-        //atualizar a lista de contatos:
-        self.delegate.atualizar()
-        //volta p a pagina anterior:
         self.navigationController?.popViewController(animated: true)
     }
     func postContatosFailure(error: String) {

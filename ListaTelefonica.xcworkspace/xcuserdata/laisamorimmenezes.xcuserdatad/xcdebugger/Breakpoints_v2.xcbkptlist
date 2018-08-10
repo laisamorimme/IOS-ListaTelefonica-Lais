@@ -9,76 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ListaTelefonica/Listar Contatos/Controller/CriarContatoViewController.swift"
-            timestampString = "555511232.501709"
+            filePath = "ListaTelefonica/Listar Contatos/Controller/DetalhamentoContatoViewController.swift"
+            timestampString = "555606970.162325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "CriarContatoViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListaTelefonica.CriarContatoViewController.textFieldTelefone.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "ListaTelefonica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laisamorimmenezes/Desktop/Codigos/IOS--listaTelefonica/ListaTelefonica/Listar%20Contatos/Controller/CriarContatoViewController.swift"
-                  timestampString = "555421467.047805"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListaTelefonica.CriarContatoViewController.textFieldTelefone.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "ListaTelefonica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laisamorimmenezes/Desktop/Codigos/IOS--listaTelefonica/ListaTelefonica/Listar%20Contatos/Controller/CriarContatoViewController.swift"
-                  timestampString = "555421467.051766"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "90">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListaTelefonica.CriarContatoViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ListaTelefonica.CriarContatoViewController"
-                  moduleName = "ListaTelefonica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laisamorimmenezes/Desktop/Codigos/IOS--listaTelefonica/ListaTelefonica/Listar%20Contatos/Controller/CriarContatoViewController.swift"
-                  timestampString = "555421467.0555249"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListaTelefonica.CriarContatoViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;ListaTelefonica.CriarContatoViewController&gt;"
-                  moduleName = "ListaTelefonica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laisamorimmenezes/Desktop/Codigos/IOS--listaTelefonica/ListaTelefonica/Listar%20Contatos/Controller/CriarContatoViewController.swift"
-                  timestampString = "555421467.059134"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "517">
-               </Location>
-            </Locations>
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "buttonExcluir(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

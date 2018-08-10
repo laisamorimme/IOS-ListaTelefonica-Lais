@@ -22,6 +22,7 @@ protocol ContatoServiceDelegate {
     func putContatosFailure(error: String)
 }
 
+//apois fazer isso pode usar eles no protocolo:
 extension ContatoServiceDelegate {
     //get:
     func getContatosSuccess() {
@@ -91,7 +92,7 @@ class ContatoService{
     // postContato(contato: ContatoView)
     func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
         
-        ContatoRequestFactory.postContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+        ContatoRequestFactory.postContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
         
             switch response.result{
                 
@@ -112,17 +113,11 @@ class ContatoService{
     
     //del:
     func delContato(id: Int) {
-        
-        ContatoRequestFactory.delete(contatoId: id).validate().responseJSON { (response: DataResponse<Any>) in
-            
-            switch response.result{
-            
+        ContatoRequestFactory.delContato(contatoId: id).validate().responseJSON { (response: DataResponse<Any>) in
+            switch response.result {
             case .success:
-                
-                self.delegate.delContatosSuccess()
-                
+               self.delegate.delContatosSuccess()
             case .failure(let error):
-                
                 self.delegate.delContatosFailure(error: error.localizedDescription)
             }
         }
@@ -131,13 +126,13 @@ class ContatoService{
     //put:
     func putContato(id: Int,nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
         
-        ContatoRequestFactory.put(contatoId: id, nome: nomeContato, aniversario: 0, email: emailContato, telefone: telefoneContato, imagem: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
-            
+        ContatoRequestFactory.putContato(contatoId: id, nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
             switch response.result{
             case .success:
-                if let contato = response.result.value{
-                    ContatoViewModel.save(contatos: [contato])
+                if let contato = response.result.value {
+                    ContatoViewModel.save(contato: contato)
                 }
+                self.delegate.putContatosSuccess()
             case .failure(let error):
                 self.delegate.putContatosFailure(error: error.localizedDescription)
             }

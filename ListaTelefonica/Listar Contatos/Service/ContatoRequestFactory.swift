@@ -12,27 +12,25 @@ import Alamofire
 class ContatoRequestFactory {
     
 //    static func postContato(contato: ContatoView) -> DataRequest {
-    static func postContato(nome: String, aniversario: Int, email: String, telefone: String, imagem: String) -> DataRequest {
+   // static func postContato(nome: String, aniversario: Int, email: String, telefone: String, avatar: String) -> DataRequest {
+    static func postContato(nome: String, aniversario: Int, email: String,telefone: String, avatar: String) -> DataRequest {
         
-        let parametros: Parameters = ["name": nome, "birth": aniversario, "email": email, "phone": telefone, "picture": imagem]
+        let parametros: Parameters = ["name": nome , "birth": aniversario, "email": email, "phone": telefone, "picture": avatar ]
         
         return Alamofire.request(baseUrl + "contacts", method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: header)
     }
     
     static func getContato() -> DataRequest {
-       
         return Alamofire.request(baseUrl + "contacts", method: .get, headers: header)
     }
     
-    static func delete(contatoId: Int) -> DataRequest {
-        
+    static func delContato(contatoId: Int) -> DataRequest {
         return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .delete, headers: header)
     }
     
 //  static func putContato(contato: ContatoView) -> DataRequest {
-    static func put(contatoId: Int, nome: String, aniversario: Int, email: String, telefone: String, imagem: String) -> DataRequest{
-        let parametros:Parameters = ["nome": nome, "birth": aniversario, "email": email, "phone": telefone, "picture": imagem]
-        
+    static func putContato(contatoId: Int, nome: String, aniversario: Int, email: String, telefone: String, avatar: String) -> DataRequest{
+        let parametros:Parameters = ["name": nome, "birth": aniversario, "email": email, "phone": telefone, "picture": avatar]
         return Alamofire.request(baseUrl + "contacts/\(contatoId)",method: .put, parameters: parametros, encoding: JSONEncoding.default, headers: header)
     }
   }

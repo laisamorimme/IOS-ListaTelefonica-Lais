@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+// construtor ?
 struct ContatoView {
     
     var id : Int = 0
@@ -26,7 +27,7 @@ struct ContatoView {
 
 class ContatoViewModel {
     
-    // para apenas uma pessoa
+    // pegar apenas uma pessoa:
     static func getAsView(_ contato: Contato?) -> ContatoView {
         
         guard let contato = contato else {
@@ -45,7 +46,7 @@ class ContatoViewModel {
         return contatoView
     }
     
-    // para um vetor de pessoas
+    // pegar o vertor de todas as pessoas:
     static func getAsView(sequence contatos: [Contato]) -> [ContatoView] {
         
         var contatosView = [ContatoView]()
@@ -58,10 +59,10 @@ class ContatoViewModel {
         return contatosView
     }
     
-    // MARK: - Realm
+    //tem a posibilidade de salvar o vertor de contatos (quando dar o clear na tela, ela busca tudos os contatos listados) ou apenas um contado (na adicao):
     static func save(contato: Contato) {
         try! uiRealm.write {
-            uiRealm.add(contatos, update: true)
+            uiRealm.add(contato, update: true)
         }
     }
     
@@ -78,6 +79,7 @@ class ContatoViewModel {
         }
     }
     
+    //pega do banco a lista de contatos ou apenas um contato:
     static func get() -> [ContatoView] {
         
         let contatosModel = uiRealm.objects(Contato.self)

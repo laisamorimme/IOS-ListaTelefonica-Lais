@@ -11,6 +11,7 @@ import UIKit
 import Reusable
 import Kingfisher
 import SVProgressHUD
+import MGSwipeTableCell
 
 class ContatosViewController: UIViewController {
     
@@ -41,24 +42,17 @@ class ContatosViewController: UIViewController {
     //esta funcao atualiza a tela cada vez que for aberta:
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.service.getContato()
-        
         self.contatos = ContatoViewModel.get()
-        
         self.tableView.reloadData()
     }
     
     //passa para outra tela ? para poder atualizar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let controller = segue.destination as? CriarContatoViewController {
-            
-            controller.delegate = self
-//            controller.title = "Criar Contato" - Feito na Tela
-//            controller.titleButton = "Adicionar" - Feito na Tela
-            
-        } else if let controller = segue.destination as? DetalhamentoContatoViewController {
+              controller.title = "Criar Contato"
+              controller.titleButton = "Adicionar"
+         } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             if let id = sender as? Int {
                 controller.idContatoPostman = id
             }
@@ -86,7 +80,7 @@ extension ContatosViewController: ContatoServiceDelegate {
     }
 }
 
-extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
+extension ContatosViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -96,11 +90,29 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
     //desenho da celula personalizada:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+//        let cell = tableView.dequeueReusableCell(for: indexPath) as LinhaTableViewCell
+//
+//        cell.bind(contato: self.contatos[indexPath.row])
+//
+//        return cell
+        
         let cell = tableView.dequeueReusableCell(for: indexPath) as LinhaTableViewCell
         
+        //configure left buttons
+        cell.rightButtons = [MGSwipeButton(title: "", icon: Asset.lixeira.image, backgroundColor: .red, padding: 25){
+            (sender: MGSwipeTableCell!) -> Bool in
+            let deletado = self.contatos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            self.service.delContato(id: deletado.id)
+            return true
+        }]
+        
+        cell.rightSwipeSettings.transition = .rotate3D
+
         cell.bind(contato: self.contatos[indexPath.row])
         
-        return cell
+            return cell
     }
     
     //altura da celula da table view:
@@ -111,7 +123,6 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
     
     //quando apertar em uma linha da table view ela vai pegar o id dela para poder pegar os dados dela:
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
         //ao apertar na cell ela n fica selecionada:
         self.tableView.deselectRow(at: indexPath, animated: true)
         //emcaminha para a outra tela:
