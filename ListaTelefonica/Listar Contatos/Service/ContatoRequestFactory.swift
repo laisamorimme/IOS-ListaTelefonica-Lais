@@ -13,10 +13,10 @@ class ContatoRequestFactory {
     
     //de acordo com o postman:
     
-//    static func postContato(contato: ContatoView) -> DataRequest {
-    static func postContato(nome: String, aniversario: Int, email: String,telefone: String, avatar: String) -> DataRequest {
+   static func postContato(contato: ContatoView) -> DataRequest {
+  //  static func postContato(nome: String, aniversario: Int, email: String,telefone: String, avatar: String) -> DataRequest {
         
-        let parametros: Parameters = ["name": nome , "birth": aniversario, "email": email, "phone": telefone, "picture": avatar ]
+        let parametros: Parameters = ["name": contato.nome , "birth": contato.aniversario, "email": contato.email, "phone": contato.telefone, "picture": contato.avatar ]
         
         return Alamofire.request(baseUrl + "contacts", method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: header)
     }
@@ -29,9 +29,9 @@ class ContatoRequestFactory {
         return Alamofire.request(baseUrl + "contacts/\(contatoId)", method: .delete, headers: header)
     }
     
-//  static func putContato(contato: ContatoView) -> DataRequest {
-    static func putContato(contatoId: Int, nome: String, aniversario: Int, email: String, telefone: String, avatar: String) -> DataRequest{
-        let parametros:Parameters = ["name": nome, "birth": aniversario, "email": email, "phone": telefone, "picture": avatar]
-        return Alamofire.request(baseUrl + "contacts/\(contatoId)",method: .put, parameters: parametros, encoding: JSONEncoding.default, headers: header)
+    static func putContato(contato: ContatoView) -> DataRequest {
+//    static func putContato(contatoId: Int, nome: String, aniversario: Int, email: String, telefone: String, avatar: String) -> DataRequest{
+        let parametros:Parameters = ["name": contato.nome, "birth": contato.aniversario, "email": contato.email, "phone": contato.telefone, "picture": contato.avatar]
+        return Alamofire.request(baseUrl + "contacts/\(contato.id)",method: .put, parameters: parametros, encoding: JSONEncoding.default, headers: header)
     }
   }

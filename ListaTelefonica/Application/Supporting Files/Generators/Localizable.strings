@@ -1,4 +1,3 @@
-
 "app.title" = "Agenda";
 
 "login.email" = "Email";
@@ -7,6 +6,11 @@
 "login.cadastrar" = "Cadastrar";
 "login.entrar" = "Entrar";
 
-
 "contatos.title" = "Contatos";
 "contatos.editar" = "Editar";
+
+"contatosCadrastra.title" = "Criar Contato";
+"contatos.adicionar" = "Adicionar";
+
+"contatosEditar.title" = "Editar Contato";
+"contatos.finalizar" = "Finalizar";

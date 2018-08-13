@@ -89,10 +89,10 @@ class ContatoService{
     }
     
     //post:
-    // postContato(contato: ContatoView)
-    func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
+    func postContato(contato: ContatoView){
+//    func postContato(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
         
-        ContatoRequestFactory.postContato(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+        ContatoRequestFactory.postContato(contato: contato).validate().responseObject { (response: DataResponse<Contato>) in
         
             switch response.result{
                 
@@ -124,9 +124,9 @@ class ContatoService{
     }
     
     //put:
-    func putContato(id: Int,nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
-        
-        ContatoRequestFactory.putContato(contatoId: id, nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: imagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+//   func putContato(id: Int,nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, imagemContato: String) {
+    func putContato(contato: ContatoView){
+        ContatoRequestFactory.putContato(contato: contato).validate().responseObject { (response: DataResponse<Contato>) in
             switch response.result{
             case .success:
                 if let contato = response.result.value {

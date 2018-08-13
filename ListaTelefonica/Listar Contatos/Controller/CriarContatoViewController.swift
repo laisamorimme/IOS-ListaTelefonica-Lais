@@ -16,7 +16,6 @@ import SVProgressHUD
 class CriarContatoViewController: UIViewController {
 
     var service: ContatoService!
-    var contato: Contato?
     
     //nao endenti:
     var contacForEdit: ContatoView!
@@ -35,10 +34,18 @@ class CriarContatoViewController: UIViewController {
     //metodo que é chamado toda vez que se carrega uma tela:
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //buttonAdicionar:
         self.service = ContatoService(delegate: self)
-       
+        if let id = id.self{
+            //editar:
+            self.title = L10n.Contatos.editar
+             self.buttonAdicionar.setTitle(L10n.Contatos.finalizar, for: .normal)
+        }else{
+            //adicionar:
+            self.title = L10n.Contatos.finalizar
+            self.buttonAdicionar.setTitle(L10n.Contatoscadrastra.title, for: .normal)
+        }
+        
+       //buttonAdicionar:
         self.buttonAdicionar.setTitle(L10n.Login.cadastrar, for: .normal)
         self.buttonAdicionar.layer.cornerRadius = self.buttonAdicionar.bounds.height/2
         self.buttonAdicionar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
@@ -62,18 +69,20 @@ class CriarContatoViewController: UIViewController {
     
     func montarContato(){
         //atribuir as variaveis com os valores do textFiel:
-        if let salvarNome = self.textFieldNome.text, let salvarEmail = self.textFieldEmail.text, let salvarTelefone = self.textFieldTelefone.text, let salvarImagem = self.textFieldImagem.text {
+        if let nome = self.textFieldNome.text, let email = self.textFieldEmail.text, let telefone = self.textFieldTelefone.text, let image = self.textFieldImagem.text {
+            
+            var contato = ContatoView(id: -1, nome: nome, email: email, avatar: image, telefone: telefone, aniversario: "")
+            
             if let id = self.id{
                 //editar os valores no postman:
-                self.service.putContato(id: id, nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+                contato.id = id
+                self.service.putContato(contato: contato)
             }else {
-                //criar um contato no postman:
-                self.service.postContato(nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+                //criar um contato:
+                self.service.postContato(contato: contato)
             }
-            
         }
     }
-    
 }
 
 extension CriarContatoViewController: ContatoServiceDelegate {
@@ -92,4 +101,3 @@ extension CriarContatoViewController: ContatoServiceDelegate {
         
     }
 }
-

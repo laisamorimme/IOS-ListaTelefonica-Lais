@@ -37,7 +37,7 @@ class ContatosViewController: UIViewController {
         self.tableView.register(cellType: LinhaTableViewCell.self)
     }
     
-    //esta funcao atualiza a tela cada vez que for aberta:
+    //esta funcao atualiza a tela cada vez que ela for aberta:
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.service.getContato()
@@ -48,8 +48,8 @@ class ContatosViewController: UIViewController {
     //passa para outra tela adicionar para poder atualizar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? CriarContatoViewController {
-            controller.title = "Criar Contato"
-            controller.titleButton = "Adicionar"
+//            controller.title = "Criar Contato"
+//            controller.titleButton = "Adicionar"
         } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             if let id = sender as? Int {
                 controller.idContato = id

@@ -14,10 +14,24 @@ enum L10n {
   }
 
   enum Contatos {
+    /// Adicionar
+    static let adicionar = L10n.tr("Localizable", "contatos.adicionar")
     /// Editar
     static let editar = L10n.tr("Localizable", "contatos.editar")
+    /// Finalizar
+    static let finalizar = L10n.tr("Localizable", "contatos.finalizar")
     /// Contatos
     static let title = L10n.tr("Localizable", "contatos.title")
+  }
+
+  enum Contatoscadrastra {
+    /// Criar Contato
+    static let title = L10n.tr("Localizable", "contatosCadrastra.title")
+  }
+
+  enum Contatoseditar {
+    /// Editar Contato
+    static let title = L10n.tr("Localizable", "contatosEditar.title")
   }
 
   enum Login {
