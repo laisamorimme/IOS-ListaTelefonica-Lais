@@ -12,7 +12,7 @@ import  ObjectMapper
 
 class Contato: Object,Mappable{
     
-    // quando for usar um optional:
+    // quando for usar um optional inteiro:
     var id = RealmOptional<Int>()
     
     //variaveis:

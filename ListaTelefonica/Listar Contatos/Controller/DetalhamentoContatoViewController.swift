@@ -23,7 +23,7 @@ class DetalhamentoContatoViewController: UIViewController {
     @IBOutlet weak var labelTelefoneContato: UILabel!
     @IBOutlet weak var buttonExcluir: UIButton!
     
-    var idContatoPostman : Int!
+    var idContato : Int!
     var contato : ContatoView!
     var service: ContatoService!
 //    var delegate: CriarContatoViewControllerDelegate!
@@ -33,27 +33,21 @@ class DetalhamentoContatoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //trazendo do banco para o label:
-        contato = ContatoViewModel.get(id: idContatoPostman)
-        labelNomeContato.text = contato.nome
-        labelEmailContato.text = contato.email
-        labelTelefoneContato.text = contato.telefone
-        imagemContato.kf.setImage(with: contato.avatarUrl)
         self.service = ContatoService(delegate: self)
-
-        
-        //button aditar:
-        let buttonEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalhamentoContatoViewController.editarContato))
-        self.navigationItem.rightBarButtonItem = buttonEditar
-
-        self.service = ContatoService(delegate: self)
-        self.contato = ContatoViewModel.get(id: idContatoPostman)
+        self.contato = ContatoViewModel.get(id: idContato)
         self.title = "\(contato.nome)"
         self.labelNomeContato.text = contato.nome
         self.labelEmailContato.text = contato.email
         self.labelTelefoneContato.text = contato.telefone
-        
+        imagemContato.kf.setImage(with: contato.avatarUrl)
+    
+        //button aditar:
+        let buttonEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalhamentoContatoViewController.editarContato))
+        self.navigationItem.rightBarButtonItem = buttonEditar
+
     }
     
+    //passa p a pagina de adicionar:
     @objc func editarContato() {
         self.perform(segue: StoryboardSegue.Contados.segueEditar)
     }
@@ -62,11 +56,10 @@ class DetalhamentoContatoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? CriarContatoViewController {
             
-            controller.delegate = self
             if segue.identifier == "segueEditar" {
                 controller.title = "Editar Contato"
                 controller.titleButton = "Atualizar"
-                controller.id = self.idContatoPostman
+                controller.id = self.idContato
             }
         }
     }
@@ -74,31 +67,18 @@ class DetalhamentoContatoViewController: UIViewController {
     //esta funcao atualiza a tela cada vez que for aberta:
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.contato = ContatoViewModel.get(id: idContatoPostman)
+        self.contato = ContatoViewModel.get(id: idContato)
         self.labelNomeContato.text = self.contato.nome
         self.labelTelefoneContato.text = self.contato.telefone
         self.labelEmailContato.text = self.contato.email
         self.imagemContato.kf.setImage(with: self.contato.avatarUrl)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //excluir o contato pelo id:
     @IBAction func buttonExcluir(_ sender: Any) {
-        self.service.delContato(id: idContatoPostman)
+        self.service.delContato(id: idContato)
         
     }
-}
-
-extension DetalhamentoContatoViewController: CriarContatoViewControllerDelegate {
-    func atualizar() {
-        
-    }
-    
-    
 }
 
 extension DetalhamentoContatoViewController: ContatoServiceDelegate {

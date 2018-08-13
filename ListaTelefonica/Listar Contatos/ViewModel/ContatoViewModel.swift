@@ -19,6 +19,7 @@ struct ContatoView {
     var telefone: String = ""
     var aniversario: String = ""
 
+    //para semprereceber uma url:
     var avatarUrl: URL? {
         
         return URL(string: self.avatar)
@@ -37,6 +38,7 @@ class ContatoViewModel {
         
         var contatoView = ContatoView()
         
+        //inicializando, pq n inicializa no de baixo tmb?
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
         contatoView.telefone = contato.telefone ?? ""
@@ -52,7 +54,7 @@ class ContatoViewModel {
         var contatosView = [ContatoView]()
         
         for contato in contatos {
-            
+            //?
             contatosView.append(self.getAsView(contato))
         }
         
@@ -79,7 +81,7 @@ class ContatoViewModel {
         }
     }
     
-    //pega do banco a lista de contatos ou apenas um contato:
+    //pega do banco a lista de contatos ou apenas um contato especifico:
     static func get() -> [ContatoView] {
         
         let contatosModel = uiRealm.objects(Contato.self)

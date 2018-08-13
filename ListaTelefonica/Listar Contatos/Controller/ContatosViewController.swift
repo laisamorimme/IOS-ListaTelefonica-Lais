@@ -35,8 +35,6 @@ class ContatosViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(cellType: LinhaTableViewCell.self)
-        
-        self.service.getContato()
     }
     
     //esta funcao atualiza a tela cada vez que for aberta:
@@ -47,14 +45,14 @@ class ContatosViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    //passa para outra tela ? para poder atualizar
+    //passa para outra tela adicionar para poder atualizar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? CriarContatoViewController {
-              controller.title = "Criar Contato"
-              controller.titleButton = "Adicionar"
-         } else if let controller = segue.destination as? DetalhamentoContatoViewController {
+            controller.title = "Criar Contato"
+            controller.titleButton = "Adicionar"
+        } else if let controller = segue.destination as? DetalhamentoContatoViewController {
             if let id = sender as? Int {
-                controller.idContatoPostman = id
+                controller.idContato = id
             }
         }
     }
@@ -98,7 +96,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(for: indexPath) as LinhaTableViewCell
         
-        //configure left buttons
+        //configure left buttons:
         cell.rightButtons = [MGSwipeButton(title: "", icon: Asset.lixeira.image, backgroundColor: .red, padding: 25){
             (sender: MGSwipeTableCell!) -> Bool in
             let deletado = self.contatos.remove(at: indexPath.row)
@@ -108,6 +106,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource{
             return true
         }]
         
+        //rotacao 3D:
         cell.rightSwipeSettings.transition = .rotate3D
 
         cell.bind(contato: self.contatos[indexPath.row])

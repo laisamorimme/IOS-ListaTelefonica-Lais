@@ -12,9 +12,6 @@ import Reusable
 import Kingfisher
 import SVProgressHUD
 
-protocol CriarContatoViewControllerDelegate {
-    func atualizar()
-}
 
 class CriarContatoViewController: UIViewController {
 
@@ -23,7 +20,7 @@ class CriarContatoViewController: UIViewController {
     
     //nao endenti:
     var contacForEdit: ContatoView!
-    var id: Int = 0
+    var id: Int?
     var titleButton:String = ""
     
     //Outlet:
@@ -33,7 +30,7 @@ class CriarContatoViewController: UIViewController {
     @IBOutlet weak var textFieldImagem: UITextField!
     @IBOutlet weak var buttonAdicionar: UIButton!
 
-    var delegate: CriarContatoViewControllerDelegate!
+
     
     //metodo que é chamado toda vez que se carrega uma tela:
     override func viewDidLoad() {
@@ -41,56 +38,43 @@ class CriarContatoViewController: UIViewController {
 
         //buttonAdicionar:
         self.service = ContatoService(delegate: self)
-        self.contacForEdit = ContatoViewModel.get(id: id)
+       
         self.buttonAdicionar.setTitle(L10n.Login.cadastrar, for: .normal)
         self.buttonAdicionar.layer.cornerRadius = self.buttonAdicionar.bounds.height/2
         self.buttonAdicionar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
-    }
-
-    //esta funcao atualiza a tela cada vez que for aberta:
-    override func viewWillAppear(_ animated: Bool) {
         self.buttonAdicionar.setTitle(self.titleButton, for: .normal)
-        if id != 0 {
+        if let id = self.id {
+            self.contacForEdit = ContatoViewModel.get(id: id)
             self.textFieldNome.text = self.contacForEdit.nome
             self.textFieldEmail.text = self.contacForEdit.email
             self.textFieldTelefone.text = self.contacForEdit.telefone
             self.textFieldImagem.text = self.contacForEdit.avatar
         }
+        
     }
     //metodo do button:
     @IBAction func buttonAdicionar(_ sender: Any) {
         //caso a variavel ainda seja 0 tem q criar se n vai editar:
-        if id != 0 {
-            self.editarContato()
-        }else {
-            self.criarContato()
-        }
+       
         
    }
     
-    //post, pois vai adicionar:
-    func criarContato(){
+    func montarContato(){
         //atribuir as variaveis com os valores do textFiel:
         if let salvarNome = self.textFieldNome.text, let salvarEmail = self.textFieldEmail.text, let salvarTelefone = self.textFieldTelefone.text, let salvarImagem = self.textFieldImagem.text {
+            if let id = self.id{
+                //editar os valores no postman:
+                self.service.putContato(id: id, nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+            }else {
+                //criar um contato no postman:
+                self.service.postContato(nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
+            }
             
-            //adiciona esses valores no postman:
-            self.service.postContato(nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
         }
-        
     }
     
-    // put, pois vai editar:
-    func editarContato(){
-        if let salvarNome = self.textFieldNome.text, let salvarEmail = self.textFieldEmail.text, let salvarTelefone = self.textFieldTelefone.text, let salvarImagem = self.textFieldImagem.text{
-            
-            self.service.putContato(id: self.id, nomeContato: salvarNome, aniversarioContato: 315, emailContato: salvarEmail, telefoneContato: salvarTelefone, imagemContato: salvarImagem)
-            
-        }
-    }
 }
-    
-
 
 extension CriarContatoViewController: ContatoServiceDelegate {
     //put:
@@ -100,26 +84,11 @@ extension CriarContatoViewController: ContatoServiceDelegate {
     func putContatosFailure(error: String) {
         
     }
-    //del:
-    func delContatosSuccess() {
-        
-    }
-    func delContatosFailure(error: String) {
-        
-    }
     //post:
     func postContatosSuccess() {
         self.navigationController?.popViewController(animated: true)
     }
     func postContatosFailure(error: String) {
-        
-    }
-    //get:
-    func getContatosSuccess() {
-   
-    }
-    
-    func getContatosFailure(error: String) {
         
     }
 }

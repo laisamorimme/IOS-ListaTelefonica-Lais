@@ -16,12 +16,8 @@ class LinhaTableViewCell: MGSwipeTableCell, NibReusable {
     //outlet:
     @IBOutlet weak var imagemPerfil: UIImageView!
     @IBOutlet weak var labelNomePessoa: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+ 
+    //atribuindo as coisas da linha, como a labelNome e a imagemPerfil:
     func bind(contato: ContatoView) {
         
         self.labelNomePessoa.text = contato.nome
