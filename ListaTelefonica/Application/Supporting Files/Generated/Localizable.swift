@@ -13,6 +13,17 @@ enum L10n {
     static let title = L10n.tr("Localizable", "app.title")
   }
 
+  enum Cadastrar {
+    /// Cadastar
+    static let button = L10n.tr("Localizable", "cadastrar.button")
+    /// Confirmar senha
+    static let confirmarSenha = L10n.tr("Localizable", "cadastrar.confirmarSenha")
+    /// Email
+    static let email = L10n.tr("Localizable", "cadastrar.email")
+    /// Senha
+    static let senha = L10n.tr("Localizable", "cadastrar.senha")
+  }
+
   enum Contatos {
     /// Adicionar
     static let adicionar = L10n.tr("Localizable", "contatos.adicionar")

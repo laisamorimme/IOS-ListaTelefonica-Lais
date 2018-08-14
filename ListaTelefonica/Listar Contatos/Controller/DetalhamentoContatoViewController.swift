@@ -11,8 +11,6 @@ import RealmSwift
 import Foundation
 import Reusable
 import Kingfisher
-import SVProgressHUD
-
 
 class DetalhamentoContatoViewController: UIViewController {
     

@@ -14,3 +14,8 @@
 
 "contatosEditar.title" = "Editar Contato";
 "contatos.finalizar" = "Finalizar";
+
+"cadastrar.email" = "Email";
+"cadastrar.senha" = "Senha";
+"cadastrar.confirmarSenha" = "Confirmar senha";
+"cadastrar.button" = "Cadastar";

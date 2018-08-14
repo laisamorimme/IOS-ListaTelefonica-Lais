@@ -14,6 +14,8 @@ protocol LoginServiceDelegate: class {
     
     func postLoginSuccess()
     func postLoginFailure(error: String)
+    func postUserSuccess()
+    func postUserFailure(error: String)
 }
 
 class LoginSevice{
@@ -43,6 +45,22 @@ class LoginSevice{
             case .failure(let error):
                 
                 self.delegate?.postLoginFailure(error: error.localizedDescription)
+            }
+        }
+    }
+    
+    func postUsuario(email: String, senha: String, confirmarSenha: String){
+        
+        LoginRequestFactory.postUsuario(email: email, senha: senha, confirmarSenha: confirmarSenha).validate().responseJSON { (response: DataResponse<Any>) in
+            
+            switch response.result{
+            case .success:
+                
+                self.delegate?.postUserSuccess()
+                
+            case .failure(let error):
+                
+                self.delegate?.postUserFailure(error: error.localizedDescription)
             }
         }
     }
