@@ -150,12 +150,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-Eb-yu9">
-                                <rect key="frame" x="37" y="366" width="301" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Imagem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-eL-BjM">
                                 <rect key="frame" x="37" y="443" width="301" height="30"/>
                                 <nil key="textColor"/>
@@ -168,13 +162,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
-                                <rect key="frame" x="114" y="542" width="149" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
+                                <rect key="frame" x="114" y="542" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="n5x-BX-fMz"/>
+                                </constraints>
                                 <state key="normal" title="Adicionar"/>
                                 <connections>
                                     <action selector="buttonAdicionar:" destination="C2n-F8-Rfx" eventType="touchUpInside" id="6hR-W0-qT3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-Eb-yu9">
+                                <rect key="frame" x="37" y="366" width="301" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -187,6 +190,7 @@
                             <constraint firstItem="HHz-pH-O98" firstAttribute="centerX" secondItem="Az0-yI-0Xo" secondAttribute="centerX" id="UZ3-aU-Me2"/>
                             <constraint firstItem="Qf1-eL-BjM" firstAttribute="top" secondItem="RBB-Eb-yu9" secondAttribute="bottom" constant="47" id="Vge-8R-NDI"/>
                             <constraint firstItem="vLF-U5-DzL" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="aHd-CU-0mf"/>
+                            <constraint firstItem="EP0-4b-eDn" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sEg-ys-KJc" secondAttribute="bottom" constant="8" id="fY5-g8-TaB"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="HHz-pH-O98" secondAttribute="trailing" constant="37" id="iAd-aL-fhn"/>
                             <constraint firstItem="RBB-Eb-yu9" firstAttribute="top" secondItem="HHz-pH-O98" secondAttribute="bottom" constant="47" id="ikl-IH-fLz"/>
                             <constraint firstItem="HHz-pH-O98" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="kEy-QV-6AE"/>

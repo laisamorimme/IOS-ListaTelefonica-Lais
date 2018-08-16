@@ -55,8 +55,7 @@ class DetalhamentoContatoViewController: UIViewController {
         if let controller = segue.destination as? CriarContatoViewController {
             
             if segue.identifier == "segueEditar" {
-                controller.title = "Editar Contato"
-                controller.titleButton = "Atualizar"
+                
                 controller.id = self.idContato
             }
         }

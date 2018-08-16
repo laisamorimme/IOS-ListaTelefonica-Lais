@@ -20,7 +20,6 @@ class CriarContatoViewController: UIViewController {
     //nao endenti:
     var contacForEdit: ContatoView!
     var id: Int?
-    var titleButton:String = ""
     
     //Outlet:
     @IBOutlet weak var textFieldNome: UITextField!
@@ -28,29 +27,26 @@ class CriarContatoViewController: UIViewController {
     @IBOutlet weak var textFieldTelefone: UITextField!
     @IBOutlet weak var textFieldImagem: UITextField!
     @IBOutlet weak var buttonAdicionar: UIButton!
-
-
     
     //metodo que é chamado toda vez que se carrega uma tela:
     override func viewDidLoad() {
         super.viewDidLoad()
         self.service = ContatoService(delegate: self)
-        if let id = id.self{
+        
+        if let id = id {
             //editar:
-            self.title = L10n.Contatos.editar
-             self.buttonAdicionar.setTitle(L10n.Contatos.finalizar, for: .normal)
-        }else{
+            self.title = L10n.Contatoseditar.title
+            self.buttonAdicionar.setTitle(L10n.Contatos.finalizar, for: .normal)
+        } else {
             //adicionar:
-            self.title = L10n.Contatos.finalizar
-            self.buttonAdicionar.setTitle(L10n.Contatoscadrastra.title, for: .normal)
+            self.title = L10n.Contatoscadrastra.title
+            self.buttonAdicionar.setTitle(L10n.Contatos.adicionar, for: .normal)
         }
         
        //buttonAdicionar:
-        self.buttonAdicionar.setTitle(L10n.Login.cadastrar, for: .normal)
         self.buttonAdicionar.layer.cornerRadius = self.buttonAdicionar.bounds.height/2
         self.buttonAdicionar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
-        self.buttonAdicionar.setTitle(self.titleButton, for: .normal)
         if let id = self.id {
             self.contacForEdit = ContatoViewModel.get(id: id)
             self.textFieldNome.text = self.contacForEdit.nome
@@ -58,7 +54,6 @@ class CriarContatoViewController: UIViewController {
             self.textFieldTelefone.text = self.contacForEdit.telefone
             self.textFieldImagem.text = self.contacForEdit.avatar
         }
-        
     }
     //metodo do button:
     @IBAction func buttonAdicionar(_ sender: Any) {

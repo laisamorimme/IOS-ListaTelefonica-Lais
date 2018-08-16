@@ -10,10 +10,11 @@
 "contatos.editar" = "Editar";
 
 "contatosCadrastra.title" = "Criar Contato";
-"contatos.adicionar" = "Adicionar";
-
 "contatosEditar.title" = "Editar Contato";
+
+
 "contatos.finalizar" = "Finalizar";
+"contatos.adicionar" = "Adicionar";
 
 "cadastrar.email" = "Email";
 "cadastrar.senha" = "Senha";
