@@ -10,7 +10,7 @@ import UIKit
 import SwiftMessages
 
 class CadastroViewController: UIViewController {
-
+    
     var service: LoginSevice!
     
     //outlet:
@@ -25,7 +25,7 @@ class CadastroViewController: UIViewController {
     //Metodo de inicializacao:
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.service = LoginSevice(delegate: self)
         
         //botando os nomes do codigo na tela:
@@ -45,15 +45,18 @@ class CadastroViewController: UIViewController {
         
         if let cadastroEmail = self.textFieldEmail.text, let cadastroSenha = self.textFieldSenha.text, let cadastroConfirmarSenha = self.textFieldConfirmarSenha.text{
             
-            self.service.postUsuario(email: cadastroEmail, senha: cadastroSenha, confirmarSenha: cadastroConfirmarSenha)
-            
             if self.textFieldSenha.text != self.textFieldConfirmarSenha.text{
                 let view = MessageView.viewFromNib(layout: .cardView)
                 view.configureTheme(.error)
                 view.configureDropShadow()
                 view.configureContent(title: "Senha errada", body: "")
                 view.button?.isHidden = true
+                SwiftMessages.show(view: view)
+                
+            } else {
+                self.service.postUsuario(email: cadastroEmail, senha: cadastroSenha, confirmarSenha: cadastroConfirmarSenha)
             }
+            
         }
     }
 }
@@ -69,9 +72,9 @@ extension CadastroViewController: LoginServiceDelegate{
     
     func postUserSuccess() {
         
-         //uma message para caso der certo:
+        //uma message para caso der certo:
         let view = MessageView.viewFromNib(layout: .cardView)
-    
+        
         view.configureTheme(.success)
         view.configureDropShadow()
         view.configureContent(title: "Usuario Criado", body: "deu certo.")
@@ -85,12 +88,12 @@ extension CadastroViewController: LoginServiceDelegate{
     func postUserFailure(error: String) {
         print(error)
         
-//        if self.textFieldSenha.text != self.textFieldConfirmarSenha.text{
-//             let view = MessageView.viewFromNib(layout: .cardView)
-//            view.configureTheme(.error)
-//            view.configureDropShadow()
-//            view.configureContent(title: "Senha errada", body: "")
-//            view.button?.isHidden = true
-//        }
+        //        if self.textFieldSenha.text != self.textFieldConfirmarSenha.text{
+        //             let view = MessageView.viewFromNib(layout: .cardView)
+        //            view.configureTheme(.error)
+        //            view.configureDropShadow()
+        //            view.configureContent(title: "Senha errada", body: "")
+        //            view.button?.isHidden = true
+        //        }
     }
 }
