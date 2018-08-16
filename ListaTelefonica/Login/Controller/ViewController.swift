@@ -42,6 +42,17 @@ class ViewController: UIViewController {
         self.buttonEntrar.setTitle(L10n.Login.entrar, for: .normal)
         self.buttonEntrar.layer.cornerRadius = self.buttonEntrar.bounds.height/2
         self.buttonEntrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
+        
+        //button cadastrar:
+        self.buttonCadastrar.setTitle(L10n.Login.cadastrar, for: .normal)
+        self.buttonCadastrar.layer.cornerRadius = self.buttonCadastrar.bounds.height/2
+        self.buttonCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
+        
+        //navigation bar:
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
 
     //button entrar:

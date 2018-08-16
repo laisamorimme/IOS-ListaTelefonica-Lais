@@ -37,6 +37,23 @@ class ContatosViewController: UIViewController {
         self.tableView.register(cellType: LinhaTableViewCell.self)
     }
     
+//    @objc func deslogar() {
+//        
+//        let logoutAlert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
+//        
+//        logoutAlert.addAction(UIAlertAction(title: "Cancelar", style: .destructive))
+//        
+//        logoutAlert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {
+//            (action: UIAlertAction!) in
+//            
+//            self.serviceAutent.Logout()
+//            
+//        }))
+//        
+//        self.present(logoutAlert, animated: true, completion: nil)
+//        
+//    }
+    
     //esta funcao atualiza a tela cada vez que ela for aberta:
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

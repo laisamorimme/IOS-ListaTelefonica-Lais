@@ -18,6 +18,9 @@ PODS:
   - Reusable/View (4.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftGen (5.2.1)
+  - SwiftMessages (4.1.4):
+    - SwiftMessages/App (= 4.1.4)
+  - SwiftMessages/App (4.1.4)
 
 DEPENDENCIES:
   - Alamofire (= 4.6.0)
@@ -29,6 +32,7 @@ DEPENDENCIES:
   - Reusable (= 4.0.0)
   - SVProgressHUD (= 2.2.5)
   - SwiftGen (= 5.2.1)
+  - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +46,7 @@ SPEC REPOS:
     - Reusable
     - SVProgressHUD
     - SwiftGen
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -54,7 +59,8 @@ SPEC CHECKSUMS:
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
+  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
 
-PODFILE CHECKSUM: 3dd450e5ccb777df88e0b5bc5f9a2edd000e3845
+PODFILE CHECKSUM: 7a1eaf4e77b3c4c7f860ee98b14ce5d71ec95448
 
 COCOAPODS: 1.5.3

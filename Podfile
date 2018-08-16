@@ -14,5 +14,6 @@ target 'ListaTelefonica' do
   pod 'Reusable', '= 4.0.0'
   pod 'SVProgressHUD', '= 2.2.5'
   pod 'MGSwipeTableCell'
+  pod 'SwiftMessages'
   
 end
