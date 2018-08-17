@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import SwiftyJSON
 
 protocol LoginServiceDelegate: class {
     
@@ -42,9 +43,18 @@ class LoginSevice{
                 
                 self.delegate?.postLoginSuccess()
                 
-            case .failure(let error):
+            case .failure(_):
+
+//                if let data = response.data {
+//                   do {
+//                        let message = try JSON(data: data)["errors"][0].stringValue
+//                        self.delegate?.postLoginFailure(error: message)
+//
+//                    } catch {
                 
-                self.delegate?.postLoginFailure(error: error.localizedDescription)
+                        self.delegate?.postLoginFailure(error: self.getErro(response: response))
+//                    }
+//                }
             }
         }
     }
@@ -64,4 +74,62 @@ class LoginSevice{
             }
         }
     }
+    
+    //pegar o erro:
+    private func getStatusCode<T: Any>(response: DataResponse<T>) -> Int {
+        
+        var statusCode = 0
+        
+        if let httpResponse = response.response {
+            
+            statusCode = httpResponse.statusCode
+            
+        } else {
+            
+            if let urlError = response.result.error as? URLError {
+                
+                statusCode = urlError.errorCode
+            }
+        }
+        
+        return statusCode
+    }
+    
+    //pega a mensagem que está no postman:
+//    private func getMessage(data: Data?, defaultMessage: String) -> String {
+//
+//        if let data = data {
+//
+//            do {
+//                let message = try JSON(data: data)["message"].stringValue
+//                return message
+//
+//            } catch {
+//
+//                return defaultMessage
+//            }
+//        }
+//        return defaultMessage
+//    }
+    
+    private func getErrorType(statusCode: Int, data: Data?) -> String {
+        
+        switch statusCode {
+        case -999:
+            return "Request cancelado."
+        case -1009:
+            return "Sem conexão com a internet"
+        default:
+            return "Tente novamente"
+        }
+    }
+    
+    private func getErro<T: Any>(response: DataResponse<T>) -> String {
+        
+        let statusCode = self.getStatusCode(response: response)
+        
+        return self.getErrorType(statusCode: statusCode, data: response.data)
+    }
+    
+    
 }

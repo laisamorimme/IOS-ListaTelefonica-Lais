@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class ViewController: UIViewController {
     
@@ -75,6 +76,7 @@ extension ViewController: LoginServiceDelegate {
     
     func postUserFailure(error: String) {
         
+        
     }
     
     
@@ -84,7 +86,13 @@ extension ViewController: LoginServiceDelegate {
     }
     
     func postLoginFailure(error: String) {
-        
+
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureTheme(.error)
+        view.configureDropShadow()
+        view.configureContent(title: error, body: "")
+        view.button?.isHidden = true
+        SwiftMessages.show(view: view)
         print(error)
     }
 }

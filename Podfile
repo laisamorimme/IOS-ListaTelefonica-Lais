@@ -15,5 +15,6 @@ target 'ListaTelefonica' do
   pod 'SVProgressHUD', '= 2.2.5'
   pod 'MGSwipeTableCell'
   pod 'SwiftMessages'
+  pod 'SwiftyJSON'
   
 end

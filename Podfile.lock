@@ -21,6 +21,7 @@ PODS:
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.6.0)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - SVProgressHUD (= 2.2.5)
   - SwiftGen (= 5.2.1)
   - SwiftMessages
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -47,6 +49,7 @@ SPEC REPOS:
     - SVProgressHUD
     - SwiftGen
     - SwiftMessages
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -60,7 +63,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 7a1eaf4e77b3c4c7f860ee98b14ce5d71ec95448
+PODFILE CHECKSUM: 6694e2bef4959f03301d7c381eae78353602ca9d
 
 COCOAPODS: 1.5.3

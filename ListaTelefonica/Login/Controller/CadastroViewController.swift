@@ -88,12 +88,12 @@ extension CadastroViewController: LoginServiceDelegate{
     func postUserFailure(error: String) {
         print(error)
         
-        //        if self.textFieldSenha.text != self.textFieldConfirmarSenha.text{
-        //             let view = MessageView.viewFromNib(layout: .cardView)
-        //            view.configureTheme(.error)
-        //            view.configureDropShadow()
-        //            view.configureContent(title: "Senha errada", body: "")
-        //            view.button?.isHidden = true
-        //        }
+    let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.error)
+            view.configureDropShadow()
+            view.configureContent(title: "Cadastro invalido", body: "")
+            view.button?.isHidden = true
+            SwiftMessages.show(view: view)
+        
     }
 }
