@@ -163,7 +163,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-ys-KJc">
-                                <rect key="frame" x="114" y="542" width="149" height="30"/>
+                                <rect key="frame" x="113" y="579" width="149" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="n5x-BX-fMz"/>
                                 </constraints>
@@ -178,12 +178,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXV-I0-xIq">
+                                <rect key="frame" x="37" y="521" width="301" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sEg-ys-KJc" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="114" id="4Fh-xN-OM5"/>
-                            <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="sEg-ys-KJc" secondAttribute="trailing" constant="112" id="5Le-5k-akm"/>
+                            <constraint firstItem="sEg-ys-KJc" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="113" id="4Fh-xN-OM5"/>
+                            <constraint firstItem="PXV-I0-xIq" firstAttribute="centerX" secondItem="Az0-yI-0Xo" secondAttribute="centerX" id="4Lc-Kz-4wD"/>
+                            <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="sEg-ys-KJc" secondAttribute="trailing" constant="113" id="5Le-5k-akm"/>
+                            <constraint firstItem="PXV-I0-xIq" firstAttribute="top" secondItem="Qf1-eL-BjM" secondAttribute="bottom" constant="48" id="LTy-y6-pvD"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="RBB-Eb-yu9" secondAttribute="trailing" constant="37" id="M2A-vU-smj"/>
+                            <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="PXV-I0-xIq" secondAttribute="trailing" constant="37" id="MtU-74-8RR"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="vLF-U5-DzL" secondAttribute="trailing" constant="37" id="OAk-EY-0xp"/>
                             <constraint firstItem="HHz-pH-O98" firstAttribute="top" secondItem="vLF-U5-DzL" secondAttribute="bottom" constant="47" id="PHG-o2-8yJ"/>
                             <constraint firstItem="RBB-Eb-yu9" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="Pf9-uf-oHR"/>
@@ -194,8 +203,9 @@
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="HHz-pH-O98" secondAttribute="trailing" constant="37" id="iAd-aL-fhn"/>
                             <constraint firstItem="RBB-Eb-yu9" firstAttribute="top" secondItem="HHz-pH-O98" secondAttribute="bottom" constant="47" id="ikl-IH-fLz"/>
                             <constraint firstItem="HHz-pH-O98" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="kEy-QV-6AE"/>
-                            <constraint firstItem="sEg-ys-KJc" firstAttribute="top" secondItem="Qf1-eL-BjM" secondAttribute="bottom" constant="69" id="rII-gc-f2g"/>
-                            <constraint firstItem="sEg-ys-KJc" firstAttribute="centerX" secondItem="Az0-yI-0Xo" secondAttribute="centerX" constant="1" id="tYO-AK-wGX"/>
+                            <constraint firstItem="PXV-I0-xIq" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="pxI-Qj-UYg"/>
+                            <constraint firstItem="sEg-ys-KJc" firstAttribute="top" secondItem="Qf1-eL-BjM" secondAttribute="bottom" constant="106" id="rII-gc-f2g"/>
+                            <constraint firstItem="sEg-ys-KJc" firstAttribute="centerX" secondItem="Az0-yI-0Xo" secondAttribute="centerX" id="tYO-AK-wGX"/>
                             <constraint firstItem="Qf1-eL-BjM" firstAttribute="leading" secondItem="EP0-4b-eDn" secondAttribute="leading" constant="37" id="uPc-oS-Cdb"/>
                             <constraint firstItem="EP0-4b-eDn" firstAttribute="trailing" secondItem="Qf1-eL-BjM" secondAttribute="trailing" constant="37" id="vii-W7-yBa"/>
                             <constraint firstItem="vLF-U5-DzL" firstAttribute="top" secondItem="EP0-4b-eDn" secondAttribute="top" constant="148" id="xPg-dw-bAL"/>
@@ -205,6 +215,7 @@
                     <navigationItem key="navigationItem" title="Title" id="5bX-Wo-W3u"/>
                     <connections>
                         <outlet property="buttonAdicionar" destination="sEg-ys-KJc" id="7mt-HN-ckR"/>
+                        <outlet property="textFieldData" destination="PXV-I0-xIq" id="VJw-Jd-7eH"/>
                         <outlet property="textFieldEmail" destination="HHz-pH-O98" id="xSu-Mj-cJQ"/>
                         <outlet property="textFieldImagem" destination="Qf1-eL-BjM" id="ZuW-Mb-GSP"/>
                         <outlet property="textFieldNome" destination="vLF-U5-DzL" id="oP4-KY-fM2"/>

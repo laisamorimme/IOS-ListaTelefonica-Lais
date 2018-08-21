@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
+  - DatePickerDialog (2.0)
   - Kingfisher (4.6.2)
   - MGSwipeTableCell (1.6.7)
   - ObjectMapper (3.1.0)
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.6.0)
   - AlamofireObjectMapper (= 5.0.0)
+  - DatePickerDialog
   - Kingfisher (= 4.6.2)
   - MGSwipeTableCell
   - ObjectMapper (= 3.1.0)
@@ -40,6 +42,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
+    - DatePickerDialog
     - Kingfisher
     - MGSwipeTableCell
     - ObjectMapper
@@ -54,6 +57,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
   Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   MGSwipeTableCell: fb20e983988bde2b8d0df29c2d9e1d8ffd10b74a
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
@@ -65,6 +69,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 6694e2bef4959f03301d7c381eae78353602ca9d
+PODFILE CHECKSUM: 6dc15aa8ebc61e180c860fc687b781304d9243f2
 
 COCOAPODS: 1.5.3

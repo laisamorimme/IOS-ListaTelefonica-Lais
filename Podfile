@@ -16,5 +16,5 @@ target 'ListaTelefonica' do
   pod 'MGSwipeTableCell'
   pod 'SwiftMessages'
   pod 'SwiftyJSON'
-  
+  pod 'DatePickerDialog'
 end

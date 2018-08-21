@@ -16,7 +16,7 @@ class ContatoRequestFactory {
    static func postContato(contato: ContatoView) -> DataRequest {
   //  static func postContato(nome: String, aniversario: Int, email: String,telefone: String, avatar: String) -> DataRequest {
         
-        let parametros: Parameters = ["name": contato.nome , "birth": contato.aniversario, "email": contato.email, "phone": contato.telefone, "picture": contato.avatar ]
+        let parametros: Parameters = ["name": contato.nome , "birth": 321, "email": contato.email, "phone": contato.telefone, "picture": contato.avatar ]
         
         return Alamofire.request(baseUrl + "contacts", method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: header)
     }

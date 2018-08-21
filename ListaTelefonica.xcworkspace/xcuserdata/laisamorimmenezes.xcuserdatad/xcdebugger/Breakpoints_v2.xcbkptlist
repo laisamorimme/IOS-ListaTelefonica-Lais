@@ -9,13 +9,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ListaTelefonica/Login/Service/LoginRequestFactory.swift"
-            timestampString = "556118682.8817151"
+            filePath = "ListaTelefonica/Listar Contatos/Service/ContatoService.swift"
+            timestampString = "556549988.791425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "postUsuario(email:senha:confirmarSenha:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "postContato(contato:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListaTelefonica/Listar Contatos/Service/ContatoService.swift"
+            timestampString = "556549989.886685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "postContato(contato:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListaTelefonica/Listar Contatos/Service/ContatoRequestFactory.swift"
+            timestampString = "556551297.900762"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "postContato(contato:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
