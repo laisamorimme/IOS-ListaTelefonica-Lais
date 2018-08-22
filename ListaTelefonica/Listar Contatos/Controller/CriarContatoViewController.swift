@@ -82,10 +82,10 @@ class CriarContatoViewController: UIViewController {
         //ordem de como vai ficar na storyboard:
         toolbar.setItems([cancelButton,spaceButton,doneButton], animated: false)
         
-        //adicionar toolbar notextField:
+        //adicionar toolbar no textField:
         self.textFieldData.inputAccessoryView = toolbar
         
-        //adicionar datepicker notextField:
+        //adicionar datepicker no textField:
         textFieldData.inputView = datePicker
     }
     
@@ -138,8 +138,8 @@ extension CriarContatoViewController: ContatoServiceDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     func putContatosFailure(error: String) {
-        
-    }
+         print(error)
+   }
     //post:
     func postContatosSuccess() {
         self.navigationController?.popViewController(animated: true)
